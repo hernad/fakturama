@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Produkte aus CSV Datei importieren</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Produkte aus CSV Datei importieren</h1>
+	<p>Produkte können aus einer CSV-Datei in Fakturama importiert werden. Die Datei muss im Format UTF-8 vorliegen
+	und durch Semikolon getrennt sein. Zeichenketten sind in Hochkommata einzuschließen.
+	Beispiel:</p>
+
+	<p class="code">
+<pre>
+"itemnr";"name";"category";"description";"price1";"price2";"price3";"price4";"price5";"block1";"block2";"block3";"block4";"block5";"vat";"options";"weight";"unit";"date_added";"picturename";"quantity";"webshopid";"qunit"
+"SAMPL01";"Elko 1000µF";"Shop/passive Bauteile";"Elektrolytkondensator 1000µF / 16V / 125°C";1,596639;1,596639;1,596639;1,596639;1,596639;"1";"10";"100";"1000";"10000";0,19;"";0,00;-1;"";"SAMPL01_Elko_1000µF.jpg";1,00;-1;"St."
+"SAMPL02";"Sicherung 1A";"Shop/passive Bauteile";"Feinsicherung 5x20mm, 1A , Auslöseverhalten:flink";0,672269;0,672269;0,672269;0,672269;0,672269;"1";"10";"100";"1000";"10000";0,19;"";0,00;-1;"";"SAMPL02_Sicherung_1A.jpg";1,00;-1;"St."
+"SAMPL03";"Poti 100k";"Shop/passive Bauteile";"Potentiometer 100k, linear, Raster: 5mm x 7.5mm";1,260504;1,260504;1,260504;1,260504;1,260504;"1";"10";"100";"1000";"10000";0,19;"";0,00;-1;"";"SAMPL03_Poti_100k.jpg";1,00;-1;"St."
+"SAMPL04";"Drossel 10µH";"Shop/passive Bauteile";"Stromkompensierte Drossel 10µH, max. 2A";4,117647;4,117647;4,117647;4,117647;4,117647;"1";"10";"100";"1000";"10000";0,19;"";0,00;-1;"";"SAMPL04_Drossel_10µH.jpg";1,00;-1;"St."
+"SAMPL05";"LCD Display 3.5";"Shop/Optoelektronik";"LCD Display mit 3.5 Stellen und LowBat Warnung";7,478992;7,478992;7,478992;7,478992;7,478992;"1";"10";"100";"1000";"10000";0,19;"";0,00;-1;"";"SAMPL05_LCD_Display_3_5.jpg";1,00;-1;"St."
+"SAMPL06";"BPW21";"Shop/Optoelektronik";"BPW21 Fotodiode 10µA/550nm";1,260504;1,260504;1,260504;1,260504;1,260504;"1";"10";"100";"1000";"10000";0,19;"";0,00;-1;"";"SAMPL06_BPW21.jpg";1,00;-1;"St."	
+</pre></p>
+	<p>Die zu importierenden Daten müssen in einer CSV Tabelle vorliegen und folgende Spalten beinhalten:</p>
+	
+	<dl>
+	<dt>itemnr</dt><dd>Artikelnummer</dd>
+		<dt>name</dt><dd> Name</dd>
+		<dt>category</dt><dd> Kategorie, in die der Artikel einsortiert wird</dd>
+		<dt>description</dt><dd> Beschreibung</dd>
+		<dt>price1</dt><dd> Nettopreis für 1. Staffelung</dd>
+		<dt>price2</dt><dd> Nettopreis für 2. Staffelung</dd>
+		<dt>price3</dt><dd> Nettopreis für 3. Staffelung</dd>
+		<dt>price4</dt><dd> Nettopreis für 4. Staffelung</dd>
+		<dt>price5</dt><dd> Nettopreis für 5. Staffelung</dd>
+		<dt>block1</dt><dd> Menge, bei die 1. Staffel startet, (z.B.: 1 bei 1-9).</dd>
+		<dt>block2</dt><dd> Menge, bei die 2. Staffel startet, (z.B.: 10 bei 10-99).</dd>
+		<dt>block3</dt><dd> Menge, bei die 3. Staffel startet, (z.B.: 100 bei 100-999).</dd>
+		<dt>block4</dt><dd> Menge, bei die 4. Staffel startet, (z.B.: 1000 bei 1000-9999).</dd>
+		<dt>block5</dt><dd> Menge, bei die 5. Staffel startet, (z.B.: 10000 bei 10000-).</dd>
+		<dt>vat</dt><dd> MwSt. z.B. 0,19 für 19%</dd>
+		<dt>options</dt><dd> wird z.Z. noch nicht unterstützt - Spalte leer lassen.</dd>
+		<dt>weight</dt><dd> Gewicht</dd>
+		<dt>unit</dt><dd> wird z.Z. noch nicht unterstützt - Spalte mit -1 füllen.</dd>
+		<dt>date_added</dt><dd> Datum, an dem das Produkt hinzugefügt wurde. Oder leer lassen.</dd>
+		<dt>picturename</dt><dd> Name des Produktbildes, z.B.: <tt>SAMPL03_Poti_100k.jpg</tt></dd>
+		<dt>quantity</dt><dd> Menge</dd>
+		<dt>webshopid</dt><dd> ID des Webshops oder -1</dd>
+		<dt>qunit</dt><dd> Mengeneinheit</dd>
+	</dl>
+
+	<p>Es wird empfohlen, den Import zuerst mit einer Tabelle aus nur 2-3 Einträgen zu testen, bevor die ganze Tabelle importiert wird.
+	Bei einem fehlerhaften Import muss ansonsten jedes Produkt einzeln gelöscht werden.</p>
+
+	<p class="see">Siehe auch <a href="export_csv_products.html">Export Liste Produkte als CSV Datei</a></p>
+
+
+</body>
+</html>

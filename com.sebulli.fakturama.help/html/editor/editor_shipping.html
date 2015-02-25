@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Editor Versandart/Versandkosten</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Editor Versandart/Versandkosten</h1>
+	<img class="screenshot" src="editor_shipping.png" alt="" /> <br />
+
+	<h2>Name</h2>
+	<p>Eindeutiger Name der Versandart. Dies ist auch die Kennung, die vom Shopsystem verwendet wird.
+	Der Name sollte dann nicht verändert werden. Anstatt dessen sollte der Text <b>Beschreibung</b>
+	angepasst werden.</p>
+
+	<h2>Kategorie</h2>
+	<p>Kategorie, in die die Versandart einsortiert wird.
+	Die Verwendung von Unterkategorien ist möglich. 
+	Die Bezeichnungen sind dann durch einen Schrägstrich <b>/</b> zu trennen. Beispiel:</p>
+	<p class="code">Hauptkategorie/Unterkategorie/WeitereUnterkategorie</p>
+
+	<h2>Beschreibung</h2>
+	<p>Dieser Text wird auf den Dokumenten verwendet.</p>
+
+	<h2>Wert</h2>
+	<p>Wert der Versandkosten. Netto oder Brutto. Welcher Wert dargestellt wird hängt von den Einstellungen und 
+	der Art der <b>MwSt. Berechnung</b> ab.</p>
+	<p class="see">Siehe <a href="../preferences/product.html#preferences_product_netgross">Einstellungen Produkt</a></p>
+
+	<h2>MwSt.</h2>
+	<p>Mehrwertsteuersatz, falls bei <b>MwSt. Berechnung</b> die Einstellung <b>konstante MwSt.</b>
+	gewählt wurde.</p>
+
+	<h2>MwSt. Berechnung</h2>
+	<p>Neben einem konstanten Mehrwertsteuersatz auf die Versandkosten ist es auch möglich, die Mehrwertsteuer abhängig von der
+	Steuer der Produkte zu berechnen.</p>
+
+	<p>Beispiel: Werden Bücher mit 7% bestellt, so werden auch auf die Versandkosten 7% berechnet.
+	Bei einer Mischbestellung mit Artikeln zu 7% und 19% wird die Mehrwertsteuer der Versandkosten anteilig berechnet.
+	Der effektive Mehrwertsteuersatz liegt dann zwischen 7% und 19%.</p>
+
+	<h2>Standard</h2>
+	<p>Zeigt den Namen derjenigen Versandart, die momentan die Standardversandart ist.</p>
+
+	<h2>zum Standard machen</h2>
+	<p>Macht diese Versandart zur Standardversandart. Versandart muss zuvor gespeichert worden sein.</p>
+
+</body>
+</html>

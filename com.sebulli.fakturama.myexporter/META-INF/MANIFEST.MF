@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Export Template
+Bundle-SymbolicName: com.sebulli.fakturama.myexporter;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.sebulli.fakturama.myexporter.Activator
+Bundle-Vendor: sebulli.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.sebulli.fakturama;bundle-version="1.2.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

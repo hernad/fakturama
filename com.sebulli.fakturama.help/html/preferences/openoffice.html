@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>OpenOffice.org / LibreOffice Einstellungen</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>OpenOffice.org / LibreOffice Einstellungen</h1>
+	<p>Fakturama benutzt OpenOffice / LibreOffice, um Dokumente und Tabellen zu exportieren.</p>
+
+	<h2>OpenOffice-org Pfad/App (z.B...)</h2>
+	<p>Je nach Betriebssystem wird hier der Ordner ausgewählt, in dem sich die OpenOffice / LibreOffice Installation befindet, oder die OpenOffice App.
+	In der Klammer steht der Standard-Pfad. Wurde es an einer anderen Stelle installiert, ist diese auszuwählen.</p>
+
+	
+	<p class="miniheading">Standardpfad für Windows Betriebssysteme</p>
+	<p class="code">C:\Program Files\OpenOffice.org 3</p>
+	
+	<p class="miniheading">Standardpfad für Linux Betriebssysteme</p>
+	<p class="code">/usr/lib/openoffice</p>
+
+	<p class="miniheading">Standardapp für MAC OS X Betriebssysteme</p>
+	<p class="code">/Applications/OpenOffice.org.app</p>
+
+
+	<h2>Dokument als ODT und PDF exportieren</h2>
+	<p>Beim Exportieren/Drucken eines Dokumentes wird dieses automatisch im Ordner <b>Dokumente</b>
+	im Arbeitsverzeichnis gespeichert. Entweder als OpenOffice.org/LibreOffice ODT Dokument, als PDF oder beides.</p>
+	<img class="icon" src="odt.png" alt="" />
+	<img class="icon" src="pdf.png" alt="" />
+
+	<a name="preferences_office_path" ></a>
+	<h2>Format und Pfad der Dateien</h2>
+	<p>Legt den Pfad der gedruckten und gespeicherten Office und PDF Dokumente fest.</p>
+	<p>Über das Hauptmenü Extras <b>Dokumente neu organisieren</b> ist es möglich,
+	bereits gespeicherte Dokumente nach den neuen Vorgaben zu verschieben und umzubenennen.</p>
+	<p>Beispiel:</p>
+	<p class="code">ODT2/{doctype}/{yyyy}/{mm}/{docname}_{address}.odt</p>
+	<p>Folgende Platzhalter können benutzt werden:</p>
+	<ul>
+		<li><b>{docname}</b> Name des Dokumentes</li>
+		<li><b>{doctype}</b> Art des Dokumentes, z.B. <b>Rechnungen</b></li>
+		<li><b>{address}</b> Adresse des Kunden (1. Zeile)</li>
+		<li><b>{yyyy}</b> Jahr (4-stellig)</li>
+		<li><b>{yy}</b> Jahr (2-stellig)</li>
+		<li><b>{mm}</b> Monat</li>
+		<li><b>{dd}</b> Tag</li>
+	</ul>
+	<p class="see">Siehe auch <a href="../application/mainmenu_extras.html">Hauptmenü Extras</a></p>
+
+
+	<h2>OpenOffice in eigenem Thread starten</h2>
+	<p>Wird diese Option aktiviert, so wird beim Drucken eines Dokumentes die Anwendung OpenOffice.org Writer in einem
+	eigenen Thread gestartet. Dies ermöglicht bei einigen Windows Betriebssystemen einen Start von OpenOffice.org.</p>
+	
+	<i>Hinweis:</i>
+	<p>Für die LibreOffice-Versionen ab 4 ist ein neues Plugin erforderlich, das die Fakturama-Version
+	1.6 bereits beinhaltet. Möchte man eine ältere Version von LibreOffice bzw. auch eine
+	Openoffice 3-Version nutzen muß man das NOA-Plugin entsprechend de Hinweisen auf
+	der Download-Seite ersetzen.</p>
+	
+	<p class="see">Siehe auch <a href="../openoffice/main.html">OpenOffice.org / LibreOffice</a></p>
+
+
+
+
+</body>
+</html>

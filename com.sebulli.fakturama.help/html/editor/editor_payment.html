@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Editor Zahlungsart</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Editor Zahlungsart</h1>
+	<img class="screenshot" src="editor_payment.png" alt="" /> <br />
+
+	<h2>Name</h2>
+	<p>Eindeutiger Name der Zahlungsart. Dies ist auch die Kennung, die vom Shopsystem verwendet wird.
+	Der Name sollte dann nicht verändert werden. Anstatt dessen sollte der Text <b>Beschreibung</b>
+	angepasst werden.</p>
+
+	<h2>Konto</h2>
+	<p>Konto, auf das alle Rechnungen mit dieser Zahlungsart gebucht werden.Zum Beispiel <b>Bank, Kreditkarte, privat verauslagt</b>.
+	Eine neues Konto wird automatisch angelegt, wenn der Kontoname in die Auswahlliste eingetragen wird.</p>
+
+	<h2>Beschreibung</h2>
+	<p>Dieser Text wird auf den Dokumenten verwendet.</p>
+
+	<h2>Skonto</h2>
+	<p>Skonto in %, das innerhalb der Frist <b>Tage Skonto</b> abgezogen werden darf.</p>
+
+	<h2>Tage Skonto</h2>
+	<p>Innerhalb dieser Zeit ist ein Skontoabzug möglich.</p>
+
+	<h2>Tage Netto</h2>
+	<p>Innerhalb dieser Zeit ist der Rechnungsbetrag ohne Skontoabzug zu bezahlen.</p>
+
+	<h2>Text 'bezahlt'</h2>
+	<p>Dieser Text wird auf die Rechnung gedruckt, wenn diese als 'bezahlt' markiert ist.</p>
+	<p><i>Beispiel:</i> Betrag von &lt;PAID.VALUE&gt; am &lt;PAID.DATE&gt; dankend erhalten.</p>
+
+	<h2>Text 'unbezahlt'</h2>
+	<p>Dieser Text wird auf die Rechnung gedruckt, wenn diese als 'unbezahlt' markiert ist. </p>
+    <p><i>Beispiel:</i> Zahlbar mit &lt;DUE.DISCOUNT.PERCENT&gt; Skonto innerhalb von &lt;DUE.DISCOUNT.DAYS&gt; 
+    Tagen bis spätestens zum &lt;DUE.DISCOUNT.DATE&gt; (=&lt;DUE.DISCOUNT.VALUE&gt;) oder ohne Abzug 
+    (=&lt;DOCUMENT.TOTAL&gt;) innerhalb von &lt;DUE.DAYS&gt; Tagen (bis spätestens zum &lt;DUE.DATE&gt;).</p>
+
+	<p>Bei beiden Texten ist es möglich, folgende Platzhalter zu verwenden:</p>
+	<ul>
+		<li><b>&lt;PAID.VALUE&gt;</b> bezahlter Betrag</li>
+		<li><b>&lt;PAID.DATE&gt;</b> Zahldatum</li>
+		<li><b>&lt;DUE.DISCOUNT.PERCENT&gt;</b> gewährtes Skonto in Prozent</li>
+		<li><b>&lt;DUE.DISCOUNT.DAYS&gt;</b> Skonto-Tage, innerhalb deren zu zahlen ist</li>
+		<li><b>&lt;DUE.DISCOUNT.DATE&gt;</b> Skontofrist, bis zu der der Betrag abzüglich Skonto fällig ist.</li>
+		<li><b>&lt;DUE.DISCOUNT.VALUE&gt;</b> Zu zahlender Gesamtbetrag mit gezogenem Skonto</li>
+		<li><b>&lt;DUE.DAYS&gt;</b> Netto-Tage, innerhalb deren zu zahlen ist</li>
+		<li><b>&lt;DUE.DATE&gt;</b> Nettofrist, bis zu der der Betrag ohne Abzug fällig ist.</li>
+		<li><b>&lt;DEBITOR.BANK.ACCOUNT.HOLDER&gt;</b> Kontoinhaber des Kundenkontos</li>
+		<li><b>&lt;DEBITOR.BANK.IBAN&gt;</b> IBAN des Kundenkontos</li>
+		<li><b>&lt;DEBITOR.BANK.IBAN.CENSORED&gt;</b> verkürzte IBAN des Kunden (zum Beispiel *****123)</li>
+		<li><b>&lt;DEBITOR.BANK.BIC&gt;</b> BIC zur IBAN des Kundenkontos</li>
+		<li><b>&lt;DEBITOR.BANK.NAME&gt;</b> Kreditinstitut des Kundenkontos</li>
+		<li><b>&lt;BANK.ACCOUNT.HOLDER&gt;</b> Kontoinhaber des Rechnungsersteller-Kontos</li>
+		<li><b>&lt;BANK.ACCOUNT&gt;</b> Rechnungsersteller-Konto</li>
+        <li><b>&lt;BANK.ACCOUNT.CENSORED&gt;</b> verkürzte Kontonummer des Rechnungsersteller-Kontos (zum Beispiel *****123)</li>
+		<li><b>&lt;BANK.IBAN&gt;</b> IBAN des Rechnungsersteller-Kontos</li>
+		<li><b>&lt;BANK.IBAN.CENSORED&gt;</b> verkürzte IBAN des Rechnungsersteller-Kontos (zum Beispiel *****123)</li>
+		<li><b>&lt;BANK.BIC&gt;</b> BIC zur IBAN des Rechnungserstellers</li>
+		<li><b>&lt;BANK.NAME&gt;</b> Kreditinstitut des Rechnungserstellers</li>
+		<li><b>&lt;DOCUMENT.TOTAL&gt;</b> Zu zahlender Gesamtbetrag bei abgelaufener Skontofrist</li>
+		<li><b>&lt;DEBITOR.MANDATREF&gt;</b> Mandatsreferenz des Kunden (bei SEPA-Lastschrift)</li>
+		<li><b>&lt;YOURCOMPANY.CREDITORID&gt;</b> eigene Gläubiger-ID (für SEPA-Lastschrift)</li>
+	</ul>
+    <p><i>Beispiel für SEPA-Lastschrifteinzug (Prenotification):</i>
+    Den Rechnungsbetrag in Höhe von &lt;DOCUMENT.TOTAL&gt; ziehen wir am &lt;DUE.DATE&gt; von Ihrem Konto 
+    &lt;DEBITOR.BANK.IBAN.CENSORED&gt; bei der &lt;DEBITOR.BANK.NAME&gt; unter Angabe der Mandatsreferenz &lt;DEBITOR.MANDATREF&gt; ein.
+    Unsere Gläubiger-ID lautet &lt;YOURCOMPANY.CREDITORID&gt;.
+    </p>
+
+	<h2>Standard</h2>
+	<p>Zeigt den Namen derjenigen Zahlungsart, die momentan die Standardzahlungsart ist.</p>
+
+	<h2>zum Standard machen</h2>
+	<p>Macht diese Zahlungsart zur Standardzahlungsart. Zahlungsart muss zuvor gespeichert worden sein.</p>
+
+</body>
+</html>

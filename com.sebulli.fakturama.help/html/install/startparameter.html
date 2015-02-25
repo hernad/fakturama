@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Zusätzliche Programmparameter beim Programmaufruf</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Zusätzliche Programmparameter beim Programmaufruf</h1>
+
+	<h2>Arbeitsverzeichnis / Mandant - Variante A</h2>
+	<p>Startet Fakturama mit einem bestimmten Arbeitsverzeichnis. Aufruf:<b>-workspace <i>Verzeichnispfad</i></b></p>
+	<p>Beispiel:</p>
+	<p><b>-workspace /home/user/Dokumente/FirmaB</b></p>
+
+	<h2>Arbeitsverzeichnis / Mandant - Variante B</h2>
+	<p>Startet Fakturama komplett mit neuen Einstellungen. Aufruf:<b>-data <i>Verzeichnispfad</i></b></p>
+	<p>Beispiel:</p>
+	<p><b>-data /home/user/.fakturamaB</b></p>
+	<p>Im Gegensatz zur Variante A wird für Fakturama selbst ein neuer Arbeitsordner gesetzt,
+	der nur indirekt etwas mit dem Arbeitsverzeichnis der Firma/Mandanten zu tun hat.
+	Bei dieser Variante wird der Benutzer nach dem ersten Start aufgefordert, ein neues
+	Arbeitsverzeichnis auszuwählen. Außerdem werden hier Einstellungen wie Fensterposition 
+	und Größe von Mandant zu Mandant unterschiedlich abgespeichert.</p>
+
+
+	<h2>Sprache / Land</h2>
+	<p>Startet Fakturama mit einer bestimmten Sprach- oder Ländereinstellung. Aufruf:<b>-nl <i>Sprach_LÄNDERCODE</i></b></p>
+	<p>Normalerweise benutzt Fakturama die Ländereinstellung des Systems. Dieser Programmparameter sollte deshalb
+	nur dann benutzt werden, wenn die Systemeinstellung nicht geändert werden kann.</p>
+	<p>Folgende Länder und Sprachen werden unterstützt:</p>
+	<ul>
+		<li><b>-nl en</b> Englisch, (keine Hilfe verfügbar)</li>
+		<li><b>-nl de</b> Deutsch, Deutschland</li>
+		<li><b>-nl de_AT</b> Deutsch, Österreich</li>
+		<li><b>-nl de_CH</b> Deutsch, Schweiz</li>
+		<li><b>-nl de_LI</b> Deutsch, Liechtenstein</li>
+		<li><b>-nl ru_RU</b> Russisch</li>
+		<li><b>-nl ro_RO</b> Rumänisch</li>
+		<li><b>-nl uk_UA</b> Ukrainisch</li>
+		<li><b>-nl hu_HU</b> Ungarisch</li>
+        <li><b>-nl es_ES</b> Spanisch</li>
+	</ul>
+
+</body>
+</html>

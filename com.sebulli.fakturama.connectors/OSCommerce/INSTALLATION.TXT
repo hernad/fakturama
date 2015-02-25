@@ -1,0 +1,7 @@
+(C) 2011-2014 - Fakturama
+2014-04-18
+http://www.fakturama.org
+
+################ INSTALLATION ##############
+Copy the file fakturama_connector.php into the folder /admin/ in your web shop.
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Editor Steuersatz</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+ 
+<body>
+	<h1>Editor Steuersatz</h1>
+	<img class="screenshot" src="editor_vat.png" alt="" /> <br />
+
+	<h2>Name</h2>
+	<p>Eindeutiger Name des Steuersatzes. Dies ist auch die Kennung, die vom Shopsystem verwendet wird.
+	Der Name sollte dann nicht verändert werden. Stattdessen sollte der Text <b>Beschreibung</b>
+	angepasst werden.</p>
+
+	<h2>Kategorie</h2>
+	<p>Kategorie, in die der Steuersatz einsortiert wird.
+	Die Verwendung von Unterkategorien ist möglich. 
+	Die Bezeichnungen sind dann durch einen Schrägstrich <b>/</b> zu trennen. Beispiel:</p>
+	<p class="code">Hauptkategorie/Unterkategorie/WeitereUnterkategorie</p>
+	<p><i>Wichtig:</i>Trägt man hier die Kategorie "Umsatzsteuer" ein (oder die in der jeweiligen Landessprache geltende Bezeichnung),
+	<br /><center><img class="screenshot" src="vat_step1.png" alt="step 1" style="border: none; text-align: center"/></center><br />
+	dann wird dieser Steuersatz in der Artikelliste eines Dokuments (Rechnung, Lieferschein o.ä.) für die Auswahlbox
+	der Steuer verwendet. 
+	<br /><center><img class="screenshot" src="vat_step2.png" alt="step 2" style="border: none; text-align: center"/></center><br />
+	Definiert man allerdings ein Produkt, das mit einem anderen Steuersatz versehen wurde,
+	dann wird beim Hineinklicken oder Anspringen des MwSt.-Feldes in der Artikelliste ein mit dieser Kategorie versehener
+	Steuersatz ausgewählt (oder der Standard-Steuersatz). Der ursprünglich dem Produkt zugewiesene Steuersatz (mit einer beliebigen anderen Kategorie) 
+	wird damit für diese Artikelliste überschrieben!</p>
+
+	<h2>Beschreibung</h2>
+	<p>Dieser Text wird auf den Dokumenten verwendet.</p>
+
+	<h2>Wert</h2>
+	<p>Prozentualer Wert des Steuersatzes.</p>
+
+	<h2>Standard</h2>
+	<p>Zeigt den Namen desjenigen Steuersatzes, der momentan der Standardsteuersatz ist.</p>
+
+	<h2>zum Standard machen</h2>
+	<p>Macht diese Steuersatzes zum Standardsteuersatz. Der Steuersatz muss zuvor gespeichert worden sein.</p>
+
+</body>
+</html>

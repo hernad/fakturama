@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Open/Libre Office" link_to="toc.xml#openoffice" topic="html/openoffice/main.html"> 
+	
+	<topic label="Open/Libre Office Vorlagen"  href="html/openoffice/templates.html">
+		<topic label="Allgemeine Platzhalter"  href="html/openoffice/placeholders_common.html"></topic>
+		<topic label="Platzhalter mit Parameter"  href="html/openoffice/placeholders_parameter.html"></topic>
+		<topic label="Platzhalter Artikelliste"  href="html/openoffice/placeholders_itemtable.html"></topic>
+		<topic label="Platzhalter Zwischensumme"  href="html/openoffice/placeholders_sum.html"></topic>
+  <topic href="html/openoffice/base.html" label="Verbindung zu Datenbank mit Base">
+  </topic>
+	</topic>
+
+</toc>

@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Allgemeine Platzhalter</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Allgemeine Platzhalter</h1>
+	<p>Platzhalter, die an jeder Stelle in der Vorlage stehen dürfen.</p>
+	<img class="icon" src="placeholders_common.png" alt="" /> <br />
+
+	<p>Bei diesen Platzhaltern können zusätzliche Parameter angegeben werden.</p>
+	<p class="see">Siehe auch <a href="placeholders_parameter.html">Platzhalter mit Parameter</a></p>
+
+	<h2>DOCUMENT.DATE</h2>
+	<p>Datum des Dokumentes. Zum Beispiel Rechnungsdatum bei einer Rechnung.</p>
+
+	<h2>DOCUMENT.ADDRESS</h2>
+	<p>(Rechnungs-)Adresse</p>
+
+	<h2>DOCUMENT.DIFFERENT.ADDRESS</h2>
+	<p>(Rechnungs-)Adresse.</p>
+	<p>Wird nur dann angezeigt, wenn sich Rechnungs- und Lieferadresse unterscheiden.</p>
+
+	<h2>DOCUMENT.DELIVERYADDRESS</h2>
+	<p>Lieferadresse</p>
+
+	<h2>DOCUMENT.DIFFERENT.DELIVERYADDRESS</h2>
+	<p>Lieferadresse</p>
+	<p>Wird nur dann angezeigt, wenn sich Rechnungs- und Lieferadresse unterscheiden.</p>
+
+	<h2>DOCUMENT.ADDRESSES.EQUAL</h2>
+	<p><b>true</b>, wenn Lieferadresse und Rechnungsadresse gleich sind, ansonsten <b>false</b></p>
+
+	<h2>DOCUMENT.TYPE</h2>
+	<p>Art des Dokumentes. Zum Beispiel: <b>Rechnung</b>, <b>Lieferschein</b></p>
+
+	<h2>DOCUMENT.NAME</h2>
+	<p>Dokumentennummer</p>
+
+	<h2>DOCUMENT.CUSTOMERREF</h2>
+	<p>Kundenreferenz</p>
+	
+	<h2>DOCUMENT.CONSULTANT</h2>
+	<p>Bearbeiter</p>
+
+	<h2>DOCUMENT.SERVICEDATE</h2>
+	<p>Leistungsdatum</p>
+
+	<a name="openoffice_placeholders_message" ></a>
+	<h2>DOCUMENT.MESSAGE<br />
+	DOCUMENT.MESSAGE1</h2>
+	<p>Text der Nachricht (Bemerkungsfeld 1)</p>
+
+	<h2>DOCUMENT.MESSAGE2</h2>
+	<p>Text einer weiteren Nachricht (Bemerkungsfeld 2)</p>
+
+	<h2>DOCUMENT.MESSAGE3</h2>
+	<p>Text einer weiteren Nachricht (Bemerkungsfeld 3)</p>
+	<p class="see">Siehe auch <a href="../preferences/document.html#preferences_document_messagefields">Einstellungen Dokument Felder "Bemerkung"</a></p>
+
+	<h2>DOCUMENT.TRANSACTION</h2>
+	<p>Eindeutiger Transaktionscode des Vorganges. Ist für Bestellung, Rechnung, Lieferschein identisch.</p>
+
+	<h2>DOCUMENT.INVOICE</h2>
+	<p>Rechnungsnummer zu diesem Vorgang. Wird ersetzt durch <b>DOCUMENT.REFERENCE.INVOICE</b></p>
+
+	<h2>DOCUMENT.WEBSHOP.ID</h2>
+	<p>Bestellnummer aus dem Webshop</p>
+
+	<h2>DOCUMENT.WEBSHOP.DATE</h2>
+	<p>Bestelldatum aus dem Webshop</p>
+
+	<h2>DOCUMENT.ORDER.DATE</h2>
+	<p>Bestelldatum</p>
+
+	<h2>DOCUMENT.ITEMS.GROSS</h2>
+	<p>Zwischensumme der Artikel (brutto)</p>
+
+	<h2>DOCUMENT.ITEMS.NET</h2>
+	<p>Zwischensumme der Artikel (netto)</p>
+
+	<h2>DOCUMENT.TOTAL.VAT</h2>
+	<p>Mehrwertsteuer</p>
+
+	<h2>DOCUMENT.TOTAL.GROSS</h2>
+	<p>Gesamtsumme incl. Versandkosten, Rabatt, Steuer (brutto)</p>
+
+	<h2>DOCUMENT.REFERENCE.OFFER</h2>
+	<p>Die Angebote, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.ORDER</h2>
+	<p>Die Bestellungen, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.CONFIRMATION</h2>
+	<p>Die Auftragsbestätigungen, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.INVOICE</h2>
+	<p>Die Rechnungen, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.INVOICE.DATE</h2>
+	<p>Das Datum der ersten Rechnung, die zum gleichen Vorgang wie dieses Dokument gehört.</p>
+
+	<h2>DOCUMENT.REFERENCE.DELIVERY</h2>
+	<p>Die Lieferscheine, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.CREDIT</h2>
+	<p>Die Gutschriften, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.DUNNING</h2>
+	<p>Die Mahnungen, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.REFERENCE.PROFORMA</h2>
+	<p>Die Proformarechnungen, die zum gleichen Vorgang wie dieses Dokument gehören.</p>
+
+	<h2>DOCUMENT.DUNNING.LEVEL</h2>
+	<p>Mahnstufe</p>
+
+
+	<h2>SHIPPING.NET</h2>
+	<p>Versandkosten (netto)</p>
+
+	<h2>SHIPPING.VAT</h2>
+	<p>Versandkosten Mehrwertsteuer</p>
+
+	<h2>SHIPPING.GROSS</h2>
+	<p>Versandkosten (brutto)</p>
+
+	<h2>SHIPPING.DESCRIPTION</h2>
+	<p>Bezeichnung Versandkosten/Versandart</p>
+
+	<h2>SHIPPING.VAT.DESCRIPTION</h2>
+	<p>Bezeichnung Steuer der Versandkosten/Versandart</p>
+
+	<h2>PAYMENT.TEXT</h2>
+	<p>Text der Zahlungsart. Abhängig davon, ob bezahlt wurde wird der Text für <b>bezahlt</b> oder
+	<b>unbezahlt</b> verwendet.</p>
+
+	<h2>PAYMENT.DESCRIPTION</h2>
+	<p>Bezeichnung Zahlungsart</p>
+
+	<h2>PAYMENT.PAID.VALUE</h2>
+	<p>Bezahlter Betrag</p>
+
+	<h2>PAYMENT.PAID.DATE</h2>
+	<p>Datum der Einzahlung</p>
+
+	<h2>PAYMENT.DUE.DAYS</h2>
+	<p>Tage, innerhalb derer die Rechnung beglichen werden muss</p>
+
+	<h2>PAYMENT.DUE.DATE</h2>
+	<p>Datum, bis zu dem die Rechnung beglichen werden muss</p>
+
+	<h2>PAYMENT.PAID</h2>
+	<p><b>true</b> oder <b>false</b> - abhängig davon, ob bezahlt wurde oder nicht</p>
+
+
+	<h2>ADDRESS</h2>
+	<p>Adresse des Kontaktes (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.FIRSTLINE</h2>
+	<p>1. Zeile der Adresse (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.GENDER</h2>
+	<p>Geschlecht (Rechnungsadresse)</p>
+
+	<a name="openoffice_placeholders_common_address_greeting" ></a>
+	<h2>ADDRESS.GREETING</h2>
+	<p>Anrede (Rechnungsadresse).</p>
+	<p class="see">Siehe auch <a href="../preferences/contactformat.html#preferences_contactformat_greeting">Format Grußformel</a></p>
+
+	<h2>ADDRESS.TITLE</h2>
+	<p>Titel (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.FIRSTNAME</h2>
+	<p>Vorname (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.LASTNAME</h2>
+	<p>Nachname (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.NAME</h2>
+	<p>Vor- und Nachname (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.BIRTHDAY</h2>
+	<p>Geburtsdatum (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.NAMEWITHCOMPANY</h2>
+	<p>Vor- und Nachname, ggf. mit Firma (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.COMPANY</h2>
+	<p>Firmenbezeichnung (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.STREET</h2>
+	<p>Straße incl. Hausnummer (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.STREETNAME</h2>
+	<p>Straßenname ohne Hausnummer (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.STREETNO</h2>
+	<p>Hausnummer (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.ZIP</h2>
+	<p>Postleitzahl (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.CITY</h2>
+	<p>Stadt (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.COUNTRY</h2>
+	<p>Land (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.COUNTRY.CODE2</h2>
+	<p>2-stelliger Ländercode (Rechnungsadresse)</p>
+
+	<h2>ADDRESS.COUNTRY.CODE3</h2>
+	<p>3-stelliger Ländercode (Rechnungsadresse)</p>
+
+	<h2>DELIVERY.ADDRESS</h2>
+	<p>Adresse des Kontaktes (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.FIRSTLINE</h2>
+	<p>1. Zeile der Adresse (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.GENDER</h2>
+	<p>Geschlecht (Lieferadresse)</p>
+
+	<a name="openoffice_placeholders_common_delivery_address_greeting" ></a>
+	<h2>DELIVERY.ADDRESS.GREETING</h2>
+	<p>Anrede (Lieferadresse)</p>
+	<p class="see">Siehe auch <a href="../preferences/contactformat.html#preferences_contactformat_greeting">Format Grußformel</a></p>
+
+	<h2>DELIVERY.ADDRESS.TITLE</h2>
+	<p>Titel (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.FIRSTNAME</h2>
+	<p>Vorname (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.LASTNAME</h2>
+	<p>Nachname (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.NAME</h2>
+	<p>Vor- und Nachname (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.BIRTHDAY</h2>
+	<p>Geburtsdatum (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.NAMEWITHCOMPANY</h2>
+	<p>Vor- und Nachname, ggf. mit Firma (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.COMPANY</h2>
+	<p>Firmenbezeichnung (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.STREET</h2>
+	<p>Straße incl. Hausnummer (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.STREETNAME</h2>
+	<p>Straßenname ohne Hausnummer (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.STREETNO</h2>
+	<p>Hausnummer (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.ZIP</h2>
+	<p>Postleitzahl (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.CITY</h2>
+	<p>Stadt (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.COUNTRY</h2>
+	<p>Land (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.COUNTRY.CODE2</h2>
+	<p>2-stelliger Ländercode (Lieferadresse)</p>
+
+	<h2>DELIVERY.ADDRESS.COUNTRY.CODE3</h2>
+	<p>3-stelliger Ländercode (Lieferadresse)</p>
+
+	<h2>ADDRESS.BANK.ACCOUNT.HOLDER</h2>
+	<p>Kontoinhaber</p>
+
+	<h2>ADDRESS.BANK.ACCOUNT</h2>
+	<p>Kontonummer</p>
+
+	<h2>ADDRESS.BANK.CODE</h2>
+	<p>Bankleitzahl</p>
+
+	<h2>ADDRESS.BANK.NAME</h2>
+	<p>Name der Bank</p>
+
+	<h2>ADDRESS.BANK.IBAN</h2>
+	<p>IBAN</p>
+
+	<h2>ADDRESS.BANK.BIC</h2>
+	<p>BIC</p>
+
+	<h2>ADDRESS.NR</h2>
+	<p>Kundennummer</p>
+
+	<h2>ADDRESS.PHONE</h2>
+	<p>Rufnummer</p>
+
+	<h2>ADDRESS.PHONE.PRE</h2>
+	<p>Rufnummer Vorwahl</p>
+
+	<h2>ADDRESS.PHONE.POST</h2>
+	<p>Rufnummer Durchwahl</p>
+
+	<h2>ADDRESS.FAX</h2>
+	<p>Faxnummer</p>
+
+	<h2>ADDRESS.FAX.PRE</h2>
+	<p>Faxnummer Vorwahl</p>
+
+	<h2>ADDRESS.FAX.POST</h2>
+	<p>Faxnummer Durchwahl</p>
+
+	<h2>ADDRESS.MOBILE</h2>
+	<p>Mobilnummer</p>
+
+	<h2>ADDRESS.MOBILE.PRE</h2>
+	<p>Mobilnummer Vorwahl</p>
+
+	<h2>ADDRESS.MOBILE.POST</h2>
+	<p>Mobilnummer Durchwahl</p>
+
+	<h2>ADDRESS.EMAIL</h2>
+	<p>E-Mail Adresse</p>
+	
+	<h2>ADDRESS.SUPPLIER.NUMBER</h2>
+	<p>Lieferantennummer</p>
+
+	<h2>ADDRESS.WEBSITE</h2>
+	<p>Webseite</p>
+
+	<h2>ADDRESS.VATNR</h2>
+	<p>USt-IdNr</p>
+
+	<h2>ADDRESS.NOTE</h2>
+	<p>Text der Notiz über diesen Kunden/Lieferanten. Vorsicht bei der Benutzung. Dieser Text sollte nicht immer auf einem Dokument erscheinen.</p>
+
+	<h2>ADDRESS.DISCOUNT</h2>
+	<p>Rabatt der diesem Kunden üblicherweise gewährt wird</p>
+
+	<h2>YOURCOMPANY.OWNER</h2>
+	<p>Name des Firmeninhabers</p>
+
+	<h2>YOURCOMPANY.OWNER.FIRSTNAME</h2>
+	<p>Vorname des Firmeninhabers</p>
+
+	<h2>YOURCOMPANY.OWNER.LASTNAME</h2>
+	<p>Nachname des Firmeninhabers</p>
+
+	<h2>YOURCOMPANY.COMPANY</h2>
+	<p>Eigene Firmenbezeichnung</p>
+
+	<h2>YOURCOMPANY.STREET</h2>
+	<p>Eigene Straße incl. Hausnummer</p>
+
+	<h2>YOURCOMPANY.STREETNAME</h2>
+	<p>Eigener Straßenname ohne Hausnummer</p>
+
+	<h2>YOURCOMPANY.STREETNO</h2>
+	<p>Eigene Hausnummer</p>
+
+	<h2>YOURCOMPANY.ZIP</h2>
+	<p>Eigene Postleitzahl</p>
+
+	<h2>YOURCOMPANY.CITY</h2>
+	<p>Eigene Stadt</p>
+
+	<h2>YOURCOMPANY.COUNTRY</h2>
+	<p>Eigenes Land</p>
+
+	<h2>YOURCOMPANY.PHONE</h2>
+	<p>Eigene Rufnummer</p>
+
+	<h2>YOURCOMPANY.PHONE.PRE</h2>
+	<p>Eigene Rufnummer Vorwahl</p>
+
+	<h2>YOURCOMPANY.PHONE.POST</h2>
+	<p>Eigene Rufnummer Durchwahl</p>
+
+	<h2>YOURCOMPANY.FAX</h2>
+	<p>Eigene Faxnummer</p>
+
+	<h2>YOURCOMPANY.FAX.PRE</h2>
+	<p>Eigene Faxnummer Vorwahl</p>
+
+	<h2>YOURCOMPANY.FAX.POST</h2>
+	<p>Eigene Faxnummer Durchwahl</p>
+
+	<h2>YOURCOMPANY.EMAIL</h2>
+	<p>Eigene E-Mail Adresse</p>
+
+	<h2>YOURCOMPANY.WEBSITE</h2>
+	<p>Eigene Webseite</p>
+
+	<h2>YOURCOMPANY.VATNR</h2>
+	<p>Eigene USt-IdNr</p>
+	
+	<h2>YOURCOMPANY.TAXOFFICE</h2>
+	<p>Finanzamtbezeichnung</p>
+	
+	<h2>YOURCOMPANY.BANKACCOUNTNR</h2>
+	<p>Kontonummer</p>
+	
+	<h2>YOURCOMPANY.BANK</h2>
+	<p>Bezeichnung der Bank</p>
+	
+	<h2>YOURCOMPANY.BANKCODE</h2>
+	<p>BLZ</p>
+	
+	<h2>YOURCOMPANY.IBAN</h2>
+	<p>IBAN</p>
+
+	<h2>YOURCOMPANY.BIC</h2>
+	<p>BIC</p>
+
+	<h2>ITEMS.DISCOUNT.VALUE</h2>
+	<p>Bruttowert des skontierten Warenwertes.</p>
+
+	<h2>ITEMS.DISCOUNT.NETVALUE</h2>
+	<p>Nettowert des skontierten Warenwertes.</p>
+
+	<h2>ITEMS.DISCOUNT.DISCOUNTPERCENT</h2>
+	<p>Skonto in %.</p>
+	
+	<h2>ITEMS.DISCOUNT.DAYS</h2>
+	<p>Skontodauer ("zahlbar in... Tagen mit Skonto")</p>
+
+	<h2>ITEMS.DISCOUNT.DUEDATE</h2>
+	<p>letztmöglicher Skontotag ("bis zum... mit x% Skonto")</p>
+
+	<h2>ITEMS.DISCOUNT.TARAVALUE</h2>
+	<p>MwSt. abzgl. Skonto.</p>
+
+	<p class="see">Siehe auch <a href="placeholders_parameter.html">Platzhalter mit Parametern</a></p>
+
+</body>
+</html>
+

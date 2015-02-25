@@ -1,0 +1,162 @@
+Change history of NOA
+
+Legend:
+[+] New Feature
+[-] Fixed Bug
+[*] API/ Functionality Change
+
+
+========================================
+ Changes from NOA 2.2.2 to 2.2.301
+========================================
+[-] Gerd Bartelt: Replace "file:/" by "file:///"
+
+========================================
+ Changes from NOA 2.2.2 to 2.2.3
+========================================
+
+[+] Optimized path searching of OpenOffice.org for Linux in ApllicationAsstistant.
+[+] Added method getLatestLocalApplication to get informations about latest available local office application to ApplicationAssistant
+[+] Added Mac path support to ApplicationAssistant and LocalOfficeConnectionGhost
+[+] Added ag.ion.bion.officelayer.OSHelper for detecting OS and use it
+[+] Added PDFFilterProperties to PDFFilter
+[+] Added MacroExecutionMode to DocumentDescriptor
+[+] Added Methods to ILayoutManager to not persist changes for hiding and showing elements
+[-] If you haven an app with more than one openoffice noa integrated frames, then the second frame and upwards is sometimes
+    not displayed under linux. Now, there is a workaround for this issue in the DocumentLoader.
+[-] Partly fixed paragraph handling with OOo 3.2
+
+========================================
+ Changes from NOA 2.2.1 to 2.2.2
+========================================
+
+[+] Added merge and split for ranges in ITextTable
+[-] Updated library bootstrapconnector.jar
+[+] Now system libraries like "libnativeview.so" can be placed in a subfolder "64bit" for use with 64bit systems
+[+] Added line cursor to view cursor.
+[+] Added text shapes, can be created with ITextContentService.constructNewTextShape(...)
+[+] Added ITextContentService.constructNewTextRange(...)
+[+] Added ITextContentService.convertLinkedImagesToEmbeded()
+[+] Added Methods to ITextDocumentImage to handle image name
+
+========================================
+ Changes from NOA 2.2.0 to 2.2.1
+========================================
+
+[+] Added real application info to IOfficeApplication
+[*] Now ApplicationAssistant uses LazyApplicationInfo
+[+] Added methods to IOfficeApplication to get setup information
+[+] Added static methods to DocumentService to get currently loaded documents and their count
+[-] Since an instance of OpenOffice.org seems to handle not more than 58 currently loaded documents an exception was added if the number of 50 currently loaded documents exceeded.
+
+========================================
+ Changes from NOA 2.1.0 to 2.2.0
+========================================
+
+[+] Bookmarks now have a method to change their name.
+[-] Fixed TextTableCellNameHelper to work with ranges string that are no real ranges but a single cell string.
+[*] Does not support OpenOffice.org 1.x anymore and was only tested with OpenOffice.org >=2.3 
+[+] Now supports OpenOffice.org 3.0
+[+] Change connection and window handling to original OpenOffice.org libs. No custom libs needed anymore.
+[+] Now automatically sets document's modified state to false on store.
+[+] Now if a document is loaded using a filter definition, the same filter definition will be used for saving the document.
+[+] Added method to document to get its initial properties it was loaded with.
+[*] Changed method getDocument in DocumentLoader to optionally take document's initial properties as argument
+[*] Now exports ag.ion.noa.graphic to be used by plugins.
+[+] Added font name handling in ICharacterProperties.
+[+] Added methods in the filters to just use the document type instead of the document itself.
+[+] Added methods to use filter name in DocumentDescriptor for loading.
+[-] Fixed text ranges returned by using search service so that the document is also included.
+[+] Added page service to presentation document.
+[+] Added some image export filters for draw and impress.
+[-] Fixed text service in table cells.
+
+========================================
+ Changes from NOA 2.0.9 to 2.1.0
+========================================
+
+[-] Fixed text field service for use with OpenOffice.org 2.3.
+[+] Added a simple print service IPrintService to IDocument.
+[-] Added handling for othe protocols than "file:" to URLAdapter.
+[+] Added method to IParagraph to get text range.
+[-] Fixed some table handling issues.
+[*] Changed method name IViewCursor.gotToRange() to IViewCursor.goToRange() and added paramter to
+    set if selection should be extended!!!
+[+] Added method to ITextTableCellRange to get XCellRange interface.
+[+] Added new class XInterfaceObjectSelection for selection support of native openoffice.org objects.
+[+] Added method to IDocument to get the belonging frame.
+[+] Added some static commads to GlobalCommands.
+[+] Added method to ITextTable to mark the table.
+[+] Added methods to ITextTable to get text range and the OpenOffice.org XTextContent and XTextTable interfaces.
+[+] Added method to IVariableTextFieldMaster to construct new variable additionaly with a number format 
+    and a flag if it is a formula.
+[+] Added methods to INumberFormatService to get XNumberFormatsSupplier interface, all number formats,
+    all number formats by type, to convert string to number and vice versa, and to apply a format
+    to a string.
+[+] Added methods to INumberFormat to get format key, type and example.
+[+] Added static class VariableTextFieldHelper to help setting content and format to a variable.
+[+] Added methods to get and set a service provider to IDocument.
+[*] Changed constructor of DocumentService!!!
+[*] Changed API of DocumentLoader!!!
+[+] Added method to IScriptProvider to get all scripts and one specific script.
+[+] Added methods to IScript to get script name, module, library and language
+[-] Fixed script provider as the method getScripts with the type parameter did not work.
+
+========================================
+ Changes from NOA 2.0.8 to 2.0.9
+========================================
+
+[+] Added simple graphic support (URL and InputStream based images work).
+[+] Added functionality to show print preview to IFrame.
+[+] Added zoom functionality to ITextDocument.
+[-] Fixed selection of text fields.
+[+] Added some static commads to GlobalCommands.
+[+] The added variable text field masters can create variable text fields.
+[+] Added functionality to handle variables text field masters to ITextFieldService.
+[+] Added functionality create placeholder text fields to ITextFieldService.
+[+] Added functionality to insert a document with an input stream to ITextCursor.
+[+] Added refresh method to ITextFieldService to refresh all text fields.
+[+] Added access to variables through ITextFieldService.
+[-] Community fixed the URLAdapter to work correctly for most cases.
+[+] The ITextTable now can set a number of header rows to apply header style for.
+[+] The ITextTableCell now has static variables with common paragraph styles.
+[+] The ITextTableCell now supports setting its paragraph style.
+[+] Added snippet for setting table cells as table header style.
+[+] Added simple snippet for calc document.
+[-] Corrected to filters.
+
+========================================
+ Changes from NOA 2.0.7 to 2.0.8
+========================================
+
+[*] Now requires Java 5.0
+[+] Added the native view for use with AWT/Swing to IDesktopService to construct a frame.
+[+] Added more toolbars to ILayoutManager and a method to hide them all.
+[+] Added functionality of WordCursor, SentenceCursor, and ParagraphCursor to 
+    ITextCursor if it is supported.
+[+] Added access to placeholders through ITextFieldService.
+[-] Range compare now works with tables.
+[+] Added access to form components through the document via IFormService.
+[+] The ITextCursor now supports operations of word, sentence and paragraph cursors.
+[+] Now it is possible to submit property values to the IDispatch interface.
+[+] The name of a style can now be set for a paragraph.
+[+] The ITextCursor has now the ability to insert a text document
+		at the current location
+[+] The ITextCursor provides now a method in order to set
+		a page break at the current position
+[+] Added access of XText interface to IText interface
+[-] Now cloning cells also clones content if fields are within the cell
+[-] As OpenOffice.org some variables are now reset to avoid the "remote bridge
+    disposed error" as the apllication crashes or a termination in any other way
+[-] Replicable tables containing only one cell are supported now.
+[*] NOA is now an OSGi Bundle.
+
+========================================
+ Changes from NOA 2.0.6 to 2.0.7
+========================================
+
+[+] Introduced adapter for document URL´s (ag.ion.noa.document.URLAdapter)
+[+] Added properties to the document descriptor
+[+] Access API for indexes of a text document
+[+] New API for the creation of UNO services on the basis of the IApplication
+		interface

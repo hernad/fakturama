@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            category="com.sebulli.fakturama.myexporter.lists"
+            class="com.sebulli.fakturama.myexporter.ExportWizard"
+            icon="icons/16/export_16.png"
+            id="com.sebulli.fakturama.myexporter.exportWizard"
+            name="My Exporter">
+      </wizard>
+            <category
+            id="com.sebulli.fakturama.myexporter.lists"
+            name="My Exporters">
+      </category>
+      
+   </extension>
+
+</plugin>

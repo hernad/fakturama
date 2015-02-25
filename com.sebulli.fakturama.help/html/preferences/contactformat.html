@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Format des Adressfeldes</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+
+	<h1>Format des Adressfeldes</h1>
+	<p>Definiert den Text der Grußformel und den Aufbau des Adressfeldes bei allen Dokumenten.</p>
+	<p>Folgende Platzhalter können verwendet werden:</p>
+	<ul>
+		<li><span class="usertext">{title}</span> Platzhalter für Titel</li>
+		<li><span class="usertext">{firstname}</span> Platzhalter für Vorname</li>
+		<li><span class="usertext">{lastname}</span> Platzhalter für Nachname</li>
+		<li><span class="usertext">{company}</span> Platzhalter für Firmenname</li>
+		<li><span class="usertext">{street}</span> Platzhalter für Straße</li>
+		<li><span class="usertext">{zip}</span> Platzhalter für PLZ</li>
+		<li><span class="usertext">{city}</span> Platzhalter für Ort</li>
+		<li><span class="usertext">{country}</span> Platzhalter für Land</li>
+	</ul>
+	<p class="see">Siehe auch <a href="../editor/editor_document.html#editor_editor_document_address">Adresse Dokumenteneditor</a></p>
+
+
+	<a name="preferences_contactformat_greeting" ></a>
+	<h2>Allgemeine Grußformel</h2>
+	<p>Format der Grußformel, die dann benutzt wird, wenn dem Kontakteintrag kein Geschlecht zugewiesen wurde.</p>
+	<p>Beispiel:</p>
+	<p class="code">Sehr geehrte Damen und Herren der Firma <b>{company}</b></p>
+	<p>wird auf einer Rechnung ersetzt zu:</p>
+	<p class="documenttext">Sehr geehrte Damen und Herren der Firma <b>Impex Import Export GmbH</b></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_address_greeting">Anrede (Rechnungsadresse)</a></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_delivery_address_greeting">Anrede (Lieferadresse)</a></p>
+
+
+
+	<h2>Grußformel Männer</h2>
+	<p>Format der Grußformel, die dann benutzt wird, wenn es sich bei dem Kontakt um einen Mann handelt.</p>
+	<p>Beispiel:</p>
+	<p class="code">Sehr geehrter Herr <b>{lastname}</b></p>
+	<p>wird auf einer Rechnung ersetzt zu:</p>
+	<p class="documenttext">Sehr geehrter Herr <b>Müller</b></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_address_greeting">Anrede (Rechnungsadresse)</a></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_delivery_address_greeting">Anrede (Lieferadresse)</a></p>
+
+
+	<h2>Grußformel Frauen</h2>
+	<p>Format der Grußformel, die dann benutzt wird, wenn es sich bei dem Kontakt um eine Frau handelt.</p>
+	<p>Beispiel:</p>
+	<p class="code">Sehr geehrte Frau <b>{lastname}</b></p>
+	<p>wird auf einer Rechnung ersetzt zu:</p>
+	<p class="documenttext">Sehr geehrte Frau <b>Müller</b></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_address_greeting">Anrede (Rechnungsadresse)</a></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_delivery_address_greeting">Anrede (Lieferadresse)</a></p>
+
+
+	<h2>Grußformel Firma</h2>
+	<p>Format der Grußformel, die dann benutzt wird, wenn es sich bei dem Kontakt um eine Firma handelt.</p>
+	<p>Beispiel:</p>
+	<p class="code">Sehr geehrte Damen und Herren der Firma <b>{company}</b></p>
+	<p>wird auf einer Rechnung ersetzt zu:</p>
+	<p class="documenttext">Sehr geehrte Damen und Herren der Firma <b>Impex Import Export GmbH</b></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_address_greeting">Anrede (Rechnungsadresse)</a></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_common_delivery_address_greeting">Anrede (Lieferadresse)</a></p>
+
+
+</body>
+</html>

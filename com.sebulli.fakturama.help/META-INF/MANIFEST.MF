@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fakturama Help
+Bundle-SymbolicName: com.sebulli.fakturama.help;singleton:=true
+Bundle-Version: 1.6.6
+Bundle-Activator: com.sebulli.fakturama.help.Activator
+Bundle-Vendor: sebulli.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.help
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

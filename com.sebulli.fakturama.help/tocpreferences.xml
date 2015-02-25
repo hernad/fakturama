@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Einstellungen" link_to="toc.xml#preferences"> 
+
+	<topic label="Allgemein"  href="html/preferences/general.html">
+	</topic>
+
+	<topic label="Dokumente"  href="html/preferences/document.html">
+		<topic label="Bedarfspositionen" href="html/preferences/optional_items.html" /> 
+	</topic>
+
+	<topic label="Export"  href="html/preferences/export.html">
+	</topic>
+
+	<topic label="Firmendaten"  href="html/preferences/yourcompany.html">
+	</topic>
+
+	<topic label="Hilfe"  href="html/preferences/help.html"> 
+		<topic label="Inhalt" href="html/preferences/help_content.html" /> 
+	</topic>
+
+	<topic label="Kontakte"  href="html/preferences/contact.html"> 
+		<topic label="Format" href="html/preferences/contactformat.html" /> 
+	</topic>
+	
+	<topic label="Nummernkreise"  href="html/preferences/numberrangevalues.html"> 
+		<topic label="Format" href="html/preferences/numberrangeformat.html" /> 
+	</topic>
+
+	<topic label="Office"  href="html/preferences/openoffice.html">
+	</topic>
+
+	<topic label="Produkte"  href="html/preferences/product.html">
+	</topic>
+
+	<topic label="Sicherheit"  href="html/common/nohelp.html"> 
+		<topic label="Sicherer Speicher" href="html/common/nohelp.html" />
+	</topic>
+
+	<topic label="Spaltenbreite Tabelle"  href="html/preferences/columnwidth.html"> 
+	</topic>
+
+	<topic label="Werkzeugleiste"  href="html/preferences/toolbar.html"> 
+	</topic>
+
+	<topic label="Webbrowser / Startseite"  href="html/preferences/browser.html"> 
+	</topic>
+
+	<topic label="Webshop"  href="html/preferences/webshopimport.html">
+		<topic label="Webshop Autorisierung" href="html/preferences/webshopauthorization.html" /> 
+		<abchor id="preferences_webshopimport" />
+	</topic>
+</toc>

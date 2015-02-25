@@ -1,0 +1,14 @@
+# Generate .pot file from Java sources
+
+echo  > ../resources/po/messages.pot
+
+find ../src/com/sebulli/fakturama/ -iname "*.java" -exec \
+	xgettext  -C -j -o ../resources/po/messages.pot \
+		--msgid-bugs-address=fakturamaATsebulli.com \
+		--copyright-holder="Gerd Bartelt" \
+		--from-code="UTF-8" \
+		--add-comments=T: \
+		--keyword=_:1 \
+		--keyword=_:1,2c \
+		{} \;
+echo "done !"

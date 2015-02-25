@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Der Dokumenteneditor</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Der Dokumenteneditor</h1>
+	<p>Der Dokumenteneditor ist für alle Arten von Dokumenten ähnlich.
+	Je nach Art des Dokumentes (Brief, Rechnung...) sind einige Elemente ausgeblendet.</p>
+	<img class="screenshot" src="editor_document.png" alt="" /> <br />
+
+	<h2>Bestellstatistik</h2>
+	<p>Wird ein Dokument vom Typ <b>Bestellung</b> geöffnet, kann bei Stammkunden ein Dialog eingeblendet werden,
+	der die bisher bezahlten Rechnungen und den Umsatz anzeigt.</p>
+	<img class="screenshot" src="customer_statistics_dialog.png" alt="" /> <br />
+	<p class="see">Siehe auch <a href="../preferences/document.html#preferences_document_customer_statistics">Einstellungen Dokument</a></p>
+
+
+	<h2>Nr.</h2>
+	<p>Dokumentennummer. Diese wird automatisch hochgezählt. Sie kann nachträglich geändert werden.
+	Es erscheint beim Abspeichern eine Warnung, wenn sie nicht der nächsten freien Nummer entspricht.</p>
+	<p class="see">Siehe <a href="../preferences/numberrangevalues.html">Nummernkreise</a></p>
+
+	<h2>Datum</h2>
+	<p>Datum des Dokumentes. Bei einer Rechnung beispielsweise das Rechnungsdatum.
+	Ein Ändern beeinflusst das Datum bei "<b>zahlbar in X Tagen bis zum:</b>"</p>
+
+	<h2>Netto oder Brutto</h2>
+	<p>Legt fest, ob die Rechnung später mit Netto oder Bruttopreisen ausgedruckt wird.
+	Abhängig davon werden die Zwischensummen, Rabattbeträge, Versand und MwSt. auf ganze Netto oder Bruttowerte gerundet.
+	Wird ein Dokument als <b>netto</b> angelegt, später trotzdem in ein Dokument mit Bruttopreisen gedruckt, kann es
+	sein, dass sich die Summen um +-1 Cent unterscheiden.</p>
+
+	<h2>Rechnung</h2>
+	<img class="screenshot" src="invoice.png" alt="" /> <br />
+	<p>Art dieses Dokumentes incl. Logo. Beispiel: Rechnung, Bestellung, Brief etc.</p>
+
+	<h2>Kundenreferenz</h2>
+	<p>Referenznummer des Kunden. Bei einem Import aus dem Webshop wird hier die Webshop-Bestellnummer verwendet.</p>
+
+	<h2>Bearbeiter</h2>
+	<p>Hier kann der Name des Mitarbeiters eingegeben werden, der für diesen Vorgang zuständig ist.</p>
+	
+	<a name="editor_editor_document_address" ></a>
+	<h2>Adresse</h2>
+	<p>Adresse des Kunden. Bei einem Lieferschein ist dies die Lieferadresse, bei allen anderen Dokumenten die Rechnungsadresse.</p>
+
+	<img class="icon" src="contact_list_20.png" alt="" /> <br />
+	<p>Die Adresse kann direkt eingegeben werden.
+	Ebenso kann über das Icon "Kontakt" eine Liste mit allen Kontaktadressen geöffnet und die gewünschte Adresse ausgewählt werden. 
+	Dann wird neben dem Adresstext auch eine Verknüpfung mit der Adresse hergestellt.
+	Der Adresstext sollte dann nur noch geringfügig geändert werden.</p>
+
+	<img class="icon" src="contact_plus_20.png" alt="" /> <br />
+	<p>Soll eine neue Adresse eingegeben und die Adressdaten gleichzeitig als neuer Kontakt angelegt werden,
+	so wird über dieses Symbol der Kontakteditor geöffnet und beim Speichern die Daten automatisch in das Dokument übernommen.</p>
+
+	<p class="see">Siehe auch <a href="../preferences/contactformat.html">Format des Adressfeldes</a></p>
+
+	<h2>Warnsymbol</h2>
+	<img class="icon" src="warning_32.png" alt="" /> <br />
+	<p>Ist die Lieferadresse unterschiedlich zur Rechnungsadresse, so erscheint ein Warnsymbol.
+	Die Lieferadresse wird beim Überfahren mit der Maus angezeigt.</p>
+
+	<h2>Bestelldatum</h2>
+	<p>Datum der Bestellung. Kann zum Beispiel auf die Rechnung gedruckt werden.</p>
+
+	<h2>Rechnung</h2>
+	<p>Nummer der Rechnung, die diesem Vorgang zugeordnet ist.</p>
+
+	<h2>MwSt.</h2>
+	<p>Die Mehrwertsteuer lässt sich für das komplette Dokument auf 0% setzen.</p>
+
+	<h2>Duplikat erzeugen</h2>
+	<img class="screenshot" src="create_duplicate.png" alt="" /> <br />
+	<p>Erzeugt aus dem Dokument eines neues. Daten werden dabei soweit wie möglich übernommen.</p>
+
+	<h2>Artikel</h2>
+	<p>Tabelle mit allen Artikeln dieses Dokumentes. Alle Spalten bis auf den (Gesamt-)Preis lassen sich ändern.
+	Ein neuer Artikel kann hinzugefügt werden:</p>
+	<img class="icon" src="product_list_20.png" alt="" /> <br />
+	<p>Auswahl des Artikels aus der Liste mit allen Produkten. Es können mehrere Artikel gleichzeitig ausgewählt werden.</p>
+	<img class="icon" src="delivery_note_list_20.png" alt="" /> <br />
+	<p>Importieren aller Artikel eines Lieferscheins. Zusätzlich kann die Lieferscheinnummer in das Feld <b>Bemerkung</b> übernommen werden.</p>	
+	<p>Es werden im Auswahldialog nur die Lieferscheine angezeigt, die noch keiner Rechnung zugeordnet sind.
+	Ein bereits zugeordneter Lieferscheinnummer kann im <a href="../application/overview.html">Übersichtsfenster</a> wieder zurückgesetzt werden.
+	Ist bereits eine Kontaktadresse vergeben, werden nur die Lieferscheine dieses Kunden aufgelistet.</p>
+	<p>Dieses Icon ist nur bei Rechnungen und Proformarechnungen aktiv.</p>
+	<p class="see">Siehe auch <a href="../preferences/document.html#preferences_document_importdeliverynote">Lieferscheinnummer beim Import hinzufügen</a></p>
+	<img class="icon" src="../application/plus_16.png" alt="" /> <br />
+	<p>Fügt eine neue Zeile mit einem Artikel ein.</p>
+	<img class="icon" src="../application/delete_16.png" alt="" /> <br />
+	<p>Löscht den ausgewählten Artikel.</p>
+
+	<a name="editor_document_previewpicture" ></a>
+	<p>In der Artikelliste kann zusätzlich ein Vorschaubild angezeigt werden.
+	Ein Klick auf dieses öffnet eine vergrößerte Ansicht des Produktbildes.</p>
+	<p class="see">Siehe auch <a href="../preferences/document.html#preferences_document_previewpicture">Einstellungen Dokument Vorschaubild</a></p>
+
+	<p>Bei einem Angebot kann ein Artikel als optionaler Artikel (Bedarfspostion) markiert werden.
+	Er wird auf dem Angebot markiert und wird nicht bei der Berechnung der
+	Gesamtsumme verwendet.</p>
+	<img class="screenshot" src="editor_document_optional_item.png" alt="" /> <br />
+	<p class="see">Siehe auch <a href="../preferences/optional_items.html">Einstellungen Bedarfspositionen</a></p>
+
+	<p>Artikel können über das Kontextmenü nach oben und unten verschoben werden 
+	(rechte Maustaste auf Artikelliste).</p>
+	<img class="icon" src="editor_document_context_menu.png" alt="" /> <br />
+	
+
+	<p><b>Tipp:</b> Sind alle Preise in Brutto, kann ein Preis dennoch als Nettowert eingegeben werden.
+	Dazu bei der Eingabe des Preises ein <b>netto</b> anfügen. Bei Bruttopreisen ein <b>brutto</b> anfügen.</p>
+	<p>Beispiel:<b>7,00€ netto</b></p>
+
+	<p class="see">Siehe auch <a href="../preferences/document.html">Einstellungen Dokument</a></p>
+
+	<h2>Bemerkung</h2>
+	<p>Feld für eine zusätzliche Bemerkung, die auf Rechnung oder Lieferschein gedruckt wird.<br />
+	Es können bis zu 3 Felder für Bemerkungen eingeblendet werden
+	</p>
+	<p class="see">Siehe auch <a href="../preferences/document.html#preferences_document_messagefields">Einstellungen Dokument Felder "Bemerkung"</a></p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_message">Platzhalter Feld "Bemerkung"</a></p>
+
+	<img class="icon" src="list_20.png" alt="" /> <br />
+	<p>Öffnet eine Liste mit vordefinierten Texten.</p>
+	<p class="see">Siehe <a href="editor_text.html">Editor Text</a></p>
+	
+	<h2>Bezahlt</h2>
+	<p>Markierung, ob die Rechnung bezahlt wurde.</p>
+
+	<h2>Zahlungsart</h2>
+	<p>Auswahl der Zahlungsart. Je nach Zahlungsart wird auf der Rechnung der entsprechende Text gedruckt.</p>
+	<p class="see">Siehe <a href="editor_payment.html">Editor Zahlungsart</a></p>
+
+	<h2>zahlbar in</h2>
+	<p>Anzahl der Tage, innerhalb derer die Rechnung bezahlt werden muss.
+	Beim Ändern wird automatisch das Datum angepasst.</p>
+
+	<h2>Tagen bis zum</h2>
+	<p>Datum, bis zu dem die Rechnung bezahlt werden muss.
+	Beim Ändern wird automatisch die Anzahl der Tage angepasst.</p>
+
+	<h2>am</h2>
+	<p>Tag des Geldeingangs.</p>
+
+	<h2>Wert</h2>
+	<p>Tatsächlicher Geldeingang. Zieht ein Kunde einen Skontobetrag ab, wird dies hier berücksichtigt. Es ist auch möglich,
+	Teilzahlungen zu erfassen. Dann trägt man den bereits bezahlten Wert hier ein. Öffnet man die Rechnung später erneut,
+	erscheint ein Warnsymbol mit dem Hinweis "Anzahlung". Der Status der Rechnung bleibt "unbezahlt".
+	<br /><img src="document_deposit.png" /></p>
+
+	<h2>Summe Brutto/Netto</h2>
+	<p>Summe aller Artikel</p>
+
+	<h2>Rabatt</h2>
+	<p>Rabatt auf alle Artikel</p>
+
+	<h2>Versand</h2>
+	<p>Die Versandkosten lassen sich aus einer Liste auswählen. Es ist auch möglich, den Betrag nachträglich von Hand zu ändern.
+	Versandkosten werden als Netto- oder Bruttowert angezeigt.</p>
+	<p class="see">Siehe <a href="editor_shipping.html">Editor Versandart</a></p>
+
+	<h2>MwSt.</h2>
+	<p>Anteil der Mehrwertsteuer</p>
+	<p class="see">Siehe <a href="editor_vat.html">Editor Steuersatz</a></p>
+
+	<h2>Gesamt</h2>
+	<p>Gesamtsumme (Brutto) des Dokumentes incl. Mehrwertsteuer.</p>
+
+	<p class="see">Siehe auch <a href="../preferences/document.html">Einstellungen Dokument</a></p>
+
+</body>
+</html>
+

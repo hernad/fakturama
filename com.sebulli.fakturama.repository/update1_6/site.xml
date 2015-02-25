@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Fakturama Update Site" url="http://www.fakturama.org/release/update1_6">
+      
+   </description>
+   <feature url="features/com.sebulli.fakturama.core_1.6.6.jar" id="com.sebulli.fakturama.core" version="1.6.6">
+      <category name="com.sebulli.fakturama"/>
+   </feature>
+   <feature url="features/com.sebulli.exporter.zugferd.feature_1.0.0.201407111148.jar" id="com.sebulli.exporter.zugferd.feature" version="1.0.0.201407111148">
+      <category name="com.sebulli.fakturama"/>
+   </feature>
+   <category-def name="com.sebulli.fakturama" label="Fakturama">
+      <description>
+         The Fakturama application.
+      </description>
+   </category-def>
+</site>

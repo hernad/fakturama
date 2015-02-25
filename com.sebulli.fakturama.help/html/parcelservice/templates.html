@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Erstellen von Paketdienst Vorlagen</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Erstellen von Paketdienst Vorlagen</h1>
+
+	<h2>Ordner für Vorlagen</h2>
+	<p>Vorlagen für Paketdienste werden im Arbeitsverzeichnis im Ordner <b>Vorlagen</b>
+	und dort im Unterordner <b>Paketdienst</b> abgelegt.</p>
+	<p class="see">Siehe auch <a href="../workspace/workspace.html">Arbeitsverzeichnis</a></p>
+
+	<h2>Aufbau einer Vorlage</h2>
+	<p class="code">
+	# Kommentar:<br />
+	name = DHL<br />
+	url  = https://www.dhl.de<br />
+	
+	# Fields:<br />
+	formModel.sender.name          = YOURCOMPANY.COMPANY<br />
+	formModel.sender.addressExt    = YOURCOMPANY.OWNER<br />
+	</p>
+
+	<h2>Kommentare</h2>
+	<p>Kommentarezeilen werden durch ein <b>#</b> eingeleitet.</p>
+
+	<h2>Name des Paketdienstes</h2>
+	<p>Der Name des Paketdienstes wird zu Beginn mit dem Schlüssel <b>name = </b> angegeben.</p>
+
+	<h2>URL des Paketdienstes</h2>
+	<p>Die URL des Paketdienstes wird  mit dem Schlüssel <b>url = </b> festgelegt.
+	Es muss nicht unbedingt die Seite sein, in der sich das Formular mit den Adressdaten befindet.</p>
+
+	<h2>Platzhalter des Adressformulares</h2>
+	<p>Die HTML Formularelemente der Paketdienstseite können mit Platzhaltern belegt werden.
+	Dazu ist der Name des Formularelementes gefolgt von einem <b>=</b>, gefolgt vom Platzhalter anzugeben.</p>
+	<p>Als Platzhalter können die gleichen wie auch bei Open/Libre-Office Vorlagen benutzt werden.</p>
+	
+	<h2>Name der Formularfelder bestimmen</h2>
+	<p>Um den Namen der Formularfelder zu bestimmen, kann entweder ein Webbrowser benutzt werden,
+	indem der Quelltext der Seite analysiert wird, oder man öffnet die Seite in einem Fakturama Webbrowser-Editor
+	und startet dann den Paketdienst. Jetzt werden die Formularfelder analysiert und der Name im Feld
+	selbst bzw. als Kommentartext beim Überfahren mit der Maus angezeigt.</p>
+
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html">Platzhalter</a>.</p>
+
+
+
+
+</body>
+</html>

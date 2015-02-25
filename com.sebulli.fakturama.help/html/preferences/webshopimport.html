@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Import aus Webshop</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+
+	<h1>Import aus Webshop</h1>
+	
+	<a name="webshop_url" ></a>
+	<h2>Webshop URL</h2>
+	<p>Vollständige URL des Importskriptes des Webshops. 
+	Wird kein Protokoll angegeben, wird http verwendet.
+	Ansonsten kann auch ein <b>https://</b> vorangestellt werden.</p>
+
+	<p class="miniheading">Beispiel:</p>
+	<p class="code">www.deinshop.de/admin/fakturama_connector.php</p>
+	<p>Die Datei <b>fakturama_connector.php</b> muss auf dem Webserver zur Verfügung stehen.
+	Siehe dazu Kapitel 'Installation'.</p>
+
+	<h2>Benutzername</h2>
+	<p>Benutzername (z.B. E-Mail) des Shop-Administrators.</p>
+
+	<h2>Passwort</h2>
+	<p>Passwort des Shop-Administrators.</p>
+
+	<h2>Produkte in Kategorie</h2>
+	<p>Kategorie, in die alle importierten Produkte aus dem Webshop abgelegt werden. Ist keine Kategorie angegeben,
+	wird die Kategorie aus dem Webshop übernommen.</p>
+	<img class="screenshot" src="webshop_productcategory.png" alt="" />
+
+	<h2>Kunden in Kategorie</h2>
+	<p>Kategorie, in die alle importierten Kunden aus dem Webshop abgelegt werden.</p>
+	<img class="screenshot" src="webshop_contactcategory.png" alt="" />
+
+	<h2>Versandart in Kategorie</h2>
+	<p>Kategorie, in die alle importierten Versandarten aus dem Webshop abgelegt werden.</p>
+
+	<a name="preferences_notification" ></a>
+	<h2>Kunde bei 'in Bearbeitung' benachrichtigen</h2>
+	<p>Wird der Status einer Bestellung auf 'in Bearbeitung' gesetzt, so kann der Kunde darüber per E-Mail benachrichtigt werden.
+	Der Status im Webshop wird ebenfalls aktualisiert.</p>
+
+	<h2>Kunde bei 'versendet' benachrichtigen</h2>
+	<p>Wird der Status einer Bestellung auf 'versendet' gesetzt, so kann der Kunde darüber per E-Mail benachrichtigt werden.
+	Der Status im Webshop wird ebenfalls aktualisiert.</p>
+
+	<h2>Maximale Anzahl importierter Produkte</h2>
+	<p>Die maximale Anzahl der importierten Produkte während eines Importvorgangs kann begrenzt werden.</p>
+
+	<h2>Nur geänderte Produkte importieren</h2>
+	<p>Beim Import aus dem Webshop werden nur diejenigen Produkte eingelesen, die seit dem letzten Import verändert wurden.
+	Zum Beispiel: Neuer Preis, geänderte Produktbeschreibung.</p>
+
+	<h2>EAN als Artikelnummer importieren</h2>
+	<p>Die im Webshop hinterlegte EAN wird als Artikelnummer importiert.</p>
+
+	<p class="see">Siehe auch <a href="../webshop/webshop_connector.html">Die Schnittstelle zum Webshop</a></p>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Format der Nummernkreise</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Format der Nummernkreise</h1>
+	<p>Beim Anlegen eines neuen Kunden, eines Produktes oder eines Dokumentes wird automatisch die Kunden-, Artikel- oder Dokumentennummer hochgezählt.</p>
+	<p>Für Kunden, Produkte und jede Art von Dokument kann ein unterschiedliches Format vorgegeben werden.</p>
+	<img class="screenshot" src="numberrange_documentnr.png" alt="" />
+
+
+	<h2>Fortlaufende Nummerierung</h2>
+	<p>Als Platzhalter für die Nummer dient die Zeichensequenz: <span class="usertext">{<span class="black">X</span>nr}</span><br />
+	Das <span class="usertext"><span class="black">X</span></span> ist durch die Anzahl der Stellen zu ersetzen.
+	Die Zahl wird mit Nullen aufgefüllt, bis die Anzahl der Stellen erreicht ist.</p>
+
+	<p>Beispiel:</p>
+	<p class="code">RE{5nr}</p>
+	<p>erzeugt bei einer Rechnungsnummer <b>'200'</b> eine formatierte Rechnungsnummer von:</p>
+	<p class="documenttext">RE00200</p>
+
+	<h2>Nummerierung mit Datum und fortlaufender Nummerierung</h2>
+	<p>Für das Datum sind folgende Platzhalter vorgesehen:</p>
+	<ul>
+		<li><span class="usertext">{YYYY}</span> Jahr 4 stellig (2011)</li>
+		<li><span class="usertext">{YY}</span> Jahr 2 stellig (11)</li>
+		<li><span class="usertext">{MM}</span> Monat</li>
+		<li><span class="usertext">{DD}</span> Tag</li>
+	</ul>
+
+	<p>Beispiel:</p>
+	<p class="code">RE{YYYY}-{MM}-{DD}-{5nr}</p>
+	<p>erzeugt bei einer Rechnungsnummer <b>'200'</b> eine formatierte Rechnungsnummer von:</p>
+	<p class="documenttext">RE2011-04-09-00200</p>
+	
+	<h2>Nummerierung mit Datum und neu beginnender Nummerierung</h2>
+	<p>Soll die Dokumentennummer täglich / monatlich / jährlich bei 1 beginnen, so sind die Platzhalter für das Datum in Kleinbuchstaben zu setzen:</p>
+	<ul>
+		<li><span class="usertext">{yyyy}</span> Jahr 4 stellig (2011), Nummerierung beginnt jährlich bei 1.</li>
+		<li><span class="usertext">{yy}</span> Jahr 2 stellig (11), Nummerierung beginnt jährlich bei 1.</li>
+		<li><span class="usertext">{mm}</span> Monat, Nummerierung beginnt monatlich bei 1.</li>
+		<li><span class="usertext">{dd}</span> Tag, Nummerierung beginnt täglich bei 1.</li>
+	</ul>
+
+	<p>Beispiel:</p>
+	<p class="code">RE{yyyy}-{mm}-{5nr}</p>
+	<p>erzeugt trotz einer Rechnungsnummer <b>'200'</b> am 31.03.2011 eine formatierte Rechnungsnummer am Beginn des 01.04.2011 von:</p>
+	<p class="documenttext">RE2011-04-00001</p>
+
+
+	<h2>Verwendung</h2>
+	<p>Für folgende Daten kann das Format vorgegeben werden:</p>
+	<ul>
+		<li>Kundennummer</li>
+		<li>Artikelnummer</li>
+		<li>Rechnungsnummer</li>
+		<li>Lieferscheinnummer</li>
+		<li>Angebotsnummer</li>
+		<li>Bestellungsnummer</li>
+		<li>Auftragsbestätigungsnummer</li>
+		<li>Gutschriftnummer</li>
+		<li>Mahnungsnummer</li>
+	</ul>
+
+
+</body>
+</html>

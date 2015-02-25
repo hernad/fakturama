@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Editor Ausgabebeleg</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Editor Einnahmen- oder Ausgabebeleg</h1>
+	<p>Alle Einahmen/Ausgaben können in Belegen erfasst und später tabellarisch und sortiert als OpenOffice Calc Tabelle
+	exportiert werden.</p>
+
+	<p>Viele Felder des Beleges sind mit einer Autovervollständigung ausgestattet.
+	Diese wird automatisch für das Feld abgeschaltet, sobald einmal der Wert korrigiert wurde.</p>
+
+	<img class="screenshot" src="editor_expenditure.png" alt="" /> <br />
+
+	<h2>Gebucht</h2>
+	<p>Alle Belege werden normalerweise beim Export berücksichtigt.
+	Soll ein Beleg nicht gebucht/exportiert werden, ist dieses Häckchen zu entfernen.
+	Der Beleg erscheint dann nur noch beim Export des Kontostandes.
+	Beispiel: 1000€ wird auf Konto A überwiesen.</p>
+
+	<h2>Konto</h2>
+	<p>Konto, auf das der Beleges gebucht wird. Zum Beispiel <b>Bank, Kreditkarte, privat verauslagt</b>.
+	Eine neues Konto wird automatisch angelegt, wenn der Kontoname in die Auswahlliste eingetragen wird.</p>
+
+	<h2>Datum</h2>
+	<p>Datum des Beleges. Das Datum, an dem die Zahlung durchgeführt wurde.</p>
+
+	<h2>Beleg Nr.</h2>
+	<p>Eigene Nummerierung der Belege.</p>
+
+	<h2>Dokument Nr.</h2>
+	<p>Nummer des Beleges, z.B. die Rechnungsnummer.</p>
+
+	<h2>Lieferant</h2>
+	<p>Name des Lieferanten</p>
+
+	<h2>Positionen</h2>
+	<p>Tabelle mit allen Positionen dieses Beleges. Der Mehrwertsteuersatz wird automatisch ausgewählt.
+	Die Zuordnung Kontenart und Mehrwertsteuersatz wird gelernt und in die Liste 
+	<b>Kontennummern</b> eingetragen. Sie lässt sich nachträglich mit dem 
+	<a href="../editor/editor_list.html">Editor Listeneintrag</a> ändern</p>
+
+	<h2>Zeile hinzufügen</h2>
+	<img class="icon" src="../application/plus_16.png" alt="" /> <br />
+	<p>Fügt eine neue Zeile für eine neuen Position ein.</p>
+
+	<h2>Zeile löschen</h2>
+	<img class="icon" src="../application/delete_16.png" alt="" /> <br />
+	<p>Löscht die ausgewählte Zeile/Position.</p>
+	
+	<h2>Skonto abgezogen</h2>
+	<p>Wird dann angewählt, wenn der gezahlte Betrag nicht mit dem berechneten <b>Gesamtbetrag</b> übereinstimmt.</p>
+	
+	<h2>Zahlbetrag</h2>
+	<p>Der Betrag, der tatsächlich bezahlt wurde.</p>
+
+	<h2>Gesamtbetrag</h2>
+	<p>Aus den einzelnen Positionen berechneter Gesamtbetrag.</p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+Folgende Parameter sind möglich:
+-x entfernt (bereinigt) alle sensiblen Daten aus der Datenbank 
+und ersetzt diese durch ein "xxx" bzw. 0.0€ bei Preisen und Umsätzen.
+
+-i Dateiname Angabe der Datenbank, die eingelesen wird. 
+Wenn nichts angegeben, wird eine Database.script im gleichen Verzeichnis erwartet
+
+-o Dateiname (Optional) Dateiname der bereinigten Datenbank.
+
+Start des Tools über die Windows Konsole:
+
+START->Ausführen->cmd
+
+Dann mit cd in das Verzeichnis wechseln, in dem database_checker.jar liegt. 
+Liegt dort auch die Database.script kann mit
+
+java -jar database_checker.jar 
+
+die Datenbank überprüft werden und mit:
+
+java -jar database_checker.jar -x -o Database_scrambled.script 
+
+wird dann auch eine bereinigte Datenbank erzeugt.
+Diese hat keine persönlichen Daten der Kunden (höchstens noch Reste des 
+Namens im Dateipfad der Dokumente). Keine Preise und Umsätze (werden alle 
+auf 0€ zurückgesetzt), und die Einstellungen für Webshop Zugangsdaten sind auch gelöscht.

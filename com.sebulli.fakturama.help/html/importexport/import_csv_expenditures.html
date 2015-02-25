@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ausgaben aus CSV Datei</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Ausgaben aus CSV Datei</h1>
+	<p>Liegen die Ausgaben bisher nur in einer Tabelle vor, können diese in Fakturama importiert werden,
+	um diese nach der Vorsteuer oder Kontenart zusammenzufassen. Die Datei muss im Format UTF-8 vorliegen
+	und durch Semikolon getrennt sein. Zeichenketten sind in Hochkommata einzuschließen.
+	Beispiel:</p>
+
+	<p class="code"><pre>
+"Category";"Date";"DocumentNr";"Nr";"Name";"Item Name";"Item Category";"Item Price";"Item VAT";"VAT"
+"Bank";11.05.2010;;"001";"Sparkasse Musterstadt";"Tan Generator";"Nebenkosten Geldverkehr";10,00 €;"ohne Vorsteuer";0%
+"Bank";14.05.2010;"RE45130";"002";"Toner3000";"Toner";"Bürobedarf";134,37 €;"Vorsteuer 19%";19%
+"Bank";14.05.2010;"RE45130";"002";"Toner3000";"Versandkosten";"Bezugsnebenkosten";3,78 €;"Vorsteuer 19%";19%
+	</pre></p>
+
+	<p>Die zu importierenden Daten müssen in einer CSV Tabelle vorliegen und folgende Spalten beinhalten:</p>
+	<dl>
+		<dt>Category</dt><dd> Kategorie, in die der Beleg einsortiert wird. Zum Beispiel "Bank", "Kreditkarte", privat verauslagt</dd>
+		<dt>Date</dt><dd> Datum des Beleges, zum Beispiel das Rechnungsdatum.</dd>
+		<dt>DocumentNr</dt><dd> Nummer des Beleges, zum Beispiel die Rechnungsnummer.</dd>
+		<dt>Nr</dt><dd> Selbst vergebene, fortlaufende Belegnummer.</dd>
+		<dt>Name</dt><dd> Name des Lieferanten.</dd>
+		<dt>Item Name</dt><dd> Text des Beleges, zum Beispiel "Weinflaschen".</dd>
+		<dt>Item Category</dt><dd> Kontenart, zum Beispiel "Wareneinkauf".</dd>
+		<dt>Item Price</dt><dd> Preis (Netto).</dd>
+		<dt>Item VAT</dt><dd> Bezeichnung der Vorsteuer, zum Beispiel "Vorsteuer 19%".</dd>
+		<dt>VAT</dt><dd> Prozentsatz der Steuer, zum Beispiel 19%.</dd>
+	</dl>
+
+	<p>Mehrere Positionen eines Beleges werden erfasst, indem jede Positionen in einer eigenen Zeile angelegt wird,
+	und die Werte in den Spalten <b>Category</b>, <b>Date</b>, <b>DocumentNr</b>, <b>Nr</b>, und <b>Name</b>
+	auf den gleichen Wert gesetzt werden. Siehe obiges Beispiel die letzten zwei Zeilen.</p>
+
+	<p>Bereits importierte Belege werden nicht ein zweites Mal importiert.</p>
+
+	<p>Es wird empfohlen, den Import zuerst mit einer Tabelle aus nur 2-3 Einträgen zu testen, bevor die ganze Tabelle importiert wird.
+	Zum Beispiel auch ein Beleg mit mehreren Positionen. Bei einem fehlerhaften Import muss ansonsten jeder Beleg einzeln gelöscht werden.</p>
+
+	<p class="see">Siehe auch <a href="export_expenditures.html">Export Liste Ausgaben</a></p>
+
+
+</body>
+</html>

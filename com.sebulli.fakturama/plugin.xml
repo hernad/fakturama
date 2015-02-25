@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            icon="icons/app/app_16.png">
+         <run
+               class="com.sebulli.fakturama.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Fakturama Perspective"
+            class="com.sebulli.fakturama.Perspective"
+            id="com.sebulli.fakturama.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewProductTable"
+            icon="icons/16/product_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewProductTable"
+            name="Products"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            class="com.sebulli.fakturama.views.NavigationView"
+            id="com.sebulli.fakturama.navigationView"
+            name="Navigation">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewContactTable"
+            icon="icons/16/contact_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewContactTable"
+            name="Contacts"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewVatTable"
+            icon="icons/16/vat_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewVatTable"
+            name="VATs"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.ErrorView"
+            icon="icons/16/error_16.png"
+            id="com.sebulli.fakturama.views.errorView"
+            name="Error"
+            restorable="false">
+      </view>
+      <view
+            class="com.sebulli.fakturama.views.Calculator"
+            icon="icons/16/calculator_16.png"
+            id="com.sebulli.fakturama.views.calculator"
+            name="Calculator"
+            restorable="false">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewDocumentTable"
+            icon="icons/16/letter_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewDocumentTable"
+            name="Documents"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewShippingTable"
+            icon="icons/16/shipping_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewShippingTable"
+            name="Shippings"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewPaymentTable"
+            icon="icons/16/payment_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewPaymentTable"
+            name="Payments"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewTextTable"
+            icon="icons/16/text_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewTextTable"
+            name="Texts"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewExpenditureVoucherTable"
+            icon="icons/16/expenditure_voucher_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewExpenditureVoucherTable"
+            name="Expenditure Vouchers"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewReceiptVoucherTable"
+            icon="icons/16/receipt_voucher_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewReceiptVoucherTable"
+            name="Receipt Vouchers"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="true"
+            class="com.sebulli.fakturama.views.datasettable.ViewListTable"
+            icon="icons/16/list_16.png"
+            id="com.sebulli.fakturama.views.datasettable.viewListTable"
+            name="Lists"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sebulli Fakturama"
+            id="com.sebulli.fakturama.category">
+      </category>
+      <category
+            id="com.sebulli.fakturama.categoryCallEditor"
+            name="Call Editor C">
+      </category>
+      <command
+            categoryId="com.sebulli.fakturama.categoryCallEditor"
+            defaultHandler="com.sebulli.fakturama.editors.CallEditor"
+            description="Call Editor"
+            id="com.sebulli.fakturama.editors.callEditor"
+            name="Call Editor">
+         <commandParameter
+               id="com.sebulli.fakturama.editors.callEditorParameter"
+               name="Call Editor Parameter"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryCallEditor"
+            description="Call Browser Editor"
+            id="com.sebulli.fakturama.actions.openBrowserEditor"
+            name="Call Browser Editor">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryCallEditor"
+            description="Open Parcel Service Browser Editor"
+            id="com.sebulli.fakturama.actions.openParcelService"
+            name="Call Parcel Service Browser Editor">
+      </command>
+      <category
+            id="com.sebulli.fakturama.categoryOpenObjectTable"
+            name="Open Object Table">
+      </category>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Calculator"
+            id="com.sebulli.fakturama.actions.openCalculator"
+            name="Open Calculator">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Contacts"
+            id="com.sebulli.fakturama.actions.openContacts"
+            name="Open Contacts">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Products"
+            id="com.sebulli.fakturama.actions.openProducts"
+            name="Open Products">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Vats"
+            id="com.sebulli.fakturama.actions.openVats"
+            name="Open Vats">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Shippings"
+            id="com.sebulli.fakturama.actions.openShippings"
+            name="Open Shippings">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Payments"
+            id="com.sebulli.fakturama.actions.openPayments"
+            name="Open Payments">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Texts"
+            id="com.sebulli.fakturama.actions.openTexts"
+            name="Open Texts">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Lists"
+            id="com.sebulli.fakturama.actions.openLists"
+            name="Open Lists">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Expenditures Vouchers"
+            id="com.sebulli.fakturama.actions.openExpenditureVouchers"
+            name="Open Expenditure Vouchers">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Receipt Vouchers"
+            id="com.sebulli.fakturama.actions.openReceiptVouchers"
+            name="Open Receipt Vouchers">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Letter"
+            id="com.sebulli.fakturama.actions.openLetter"
+            name="Open Letter">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Credit"
+            id="com.sebulli.fakturama.actions.openCredit"
+            name="Open Credit">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Offer"
+            id="com.sebulli.fakturama.actions.openOffer"
+            name="Open Offer">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryOpenObjectTable"
+            description="Open Documents"
+            id="com.sebulli.fakturama.actions.openDocuments"
+            name="Open Documents">
+      </command>
+      <category
+            id="com.sebulli.fakturama.categoryNewObject"
+            name="New Objects">
+      </category>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Letter"
+            id="com.sebulli.fakturama.actions.newLetter"
+            name="Create New Letter">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Offer"
+            id="com.sebulli.fakturama.actions.newOffer"
+            name="Create New Offer">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Order"
+            id="com.sebulli.fakturama.actions.newOrder"
+            name="Create New Order">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Confirmation"
+            id="com.sebulli.fakturama.actions.newConfirmation"
+            name="Create New Confirmation">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Invoice"
+            id="com.sebulli.fakturama.actions.newInvoice"
+            name="Create New Invoice">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Delivery"
+            id="com.sebulli.fakturama.actions.newDelivery"
+            name="Create New Delivery">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Credit"
+            id="com.sebulli.fakturama.actions.newCredit"
+            name="Create New Credit">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Dunning"
+            id="com.sebulli.fakturama.actions.newDunning"
+            name="Create New Dunning">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Proforma"
+            id="com.sebulli.fakturama.actions.newProforma"
+            name="Create New Proforma">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Contact"
+            id="com.sebulli.fakturama.actions.newContact"
+            name="Create New Contact">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Product"
+            id="com.sebulli.fakturama.actions.newProduct"
+            name="Create New Product">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New VAT"
+            id="com.sebulli.fakturama.actions.newVat"
+            name="Create New VAT">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Shipping"
+            id="com.sebulli.fakturama.actions.newShipping"
+            name="Create New Shipping">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Discount"
+            id="com.sebulli.fakturama.actions.newDiscount"
+            name="Create New Discount">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Payment"
+            id="com.sebulli.fakturama.actions.newPayment"
+            name="Create New Payment">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Text"
+            id="com.sebulli.fakturama.actions.newText"
+            name="Create New Text">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New List Entry"
+            id="com.sebulli.fakturama.actions.newListEntry"
+            name="Create New List Entry">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Expenditure Voucher"
+            id="com.sebulli.fakturama.actions.newExpenditureVoucher"
+            name="Create New Expenditure Voucher">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Receipt Voucher"
+            id="com.sebulli.fakturama.actions.newReceiptVoucher"
+            name="Create New Receipt Voucher">
+      </command>
+      <command
+            categoryId="com.sebulli.fakturama.categoryNewObject"
+            description="Create New Document"
+            id="com.sebulli.fakturama.actions.newDocument"
+            name="Create New Document">
+      </command>
+      <category
+            id="com.sebulli.fakturama.categoryDeleteObject"
+            name="Delete Object">
+      </category>
+      <command
+            categoryId="com.sebulli.fakturama.categoryDeleteObject"
+            description="Delete DataSet"
+            id="com.sebulli.fakturama.actions.deleteDataSet"
+            name="Delete DataSet">
+      </command>
+      <command
+            description="Move an entry up"
+            id="com.sebulli.fakturama.actions.moveEntryUp"
+            name="Move Up Entry">
+      </command>
+      <command
+            description="Move an entry down"
+            id="com.sebulli.fakturama.actions.moveEntryDown"
+            name="Move Down Entry">
+      </command>
+      <command
+            description="Move an entry down"
+            id="com.sebulli.fakturama.actions.moveEntryDown"
+            name="Move Down Entry">
+      </command>
+      <command
+            description="Select Workspace"
+            id="com.sebulli.fakturama.actions.selectWorkspace"
+            name="Select Workspace">
+      </command>
+      <command
+            description="Web Shop Import"
+            id="com.sebulli.fakturama.actions.webShopImport"
+            name="Web Shop Import">
+      </command>
+      <command
+            description="Mark Order As"
+            id="com.sebulli.fakturama.actions.markOrderAs"
+            name="Mark Order As">
+      </command>
+      <command
+            description="Mark Document As Paid"
+            id="com.sebulli.fakturama.actions.markDocumentAsPaid"
+            name="Mark Document As Paid">
+      </command>
+            <command
+            description="Remove Invoice Reference"
+            id="com.sebulli.fakturama.actions.removeInvoiceRef"
+            name="Remove Invoice Reference">
+      </command>
+      <command
+            description="Save"
+            id="com.sebulli.fakturama.actions.save"
+            name="Save">
+      </command>
+      <command
+            description="Update"
+            id="com.sebulli.fakturama.actions.update"
+            name="Update">
+      </command>
+      <command
+            description="Install"
+            id="com.sebulli.fakturama.actions.install"
+            name="Install">
+      </command>
+      <command
+            description="Reoganize all documents"
+            id="com.sebulli.fakturama.actions.reorganizeDocuments"
+            name="Reorganize documents">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            schemeId="com.sebulli.fakturama.scheme"
+            sequence="M1+Q">
+      </key>
+      <key
+            commandId="com.sebulli.fakturama.actions.deleteDataSet"
+            schemeId="com.sebulli.fakturama.scheme"
+            sequence="DEL">
+      </key>
+      <scheme
+            id="com.sebulli.fakturama.scheme"
+            name="FakturamaScheme">
+      </scheme>
+      <key
+            commandId="org.eclipse.ui.file.print"
+            schemeId="com.sebulli.fakturama.scheme"
+            sequence="M1+P">
+      </key>
+      <key
+            commandId="org.eclipse.ui.file.save"
+            schemeId="com.sebulli.fakturama.scheme"
+            sequence="M1+S">
+      </key>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.sebulli.fakturama.application"
+            name="Fakturama">
+            
+         <property
+               name="aboutText"
+               value="%about.text">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/app/about.png">
+         </property>
+            
+         <property
+               name="startupProgressRect"
+               value="5,359,515,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="appName"
+               value="Fakturama">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="ffffff">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="5,5,500,300">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/app/app_16.png,icons/app/app_32.png,icons/app/app_48.png,icons/app/app_64.png,icons/app/app_128.png">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.sebulli.fakturama.preferences.ToolbarPreferencePage"
+            id="com.sebulli.fakturama.preferences.toolbarPreferencePage"
+            name="%page.toolbar">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.ProductPreferencePage"
+            id="com.sebulli.fakturama.preferences.productPreferencePage"
+            name="%page.products">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.ContactPreferencePage"
+            id="com.sebulli.fakturama.preferences.contactPreferencePage"
+            name="%page.contacts">
+      </page>
+      <page
+            category="com.sebulli.fakturama.preferences.contactPreferencePage"
+            class="com.sebulli.fakturama.preferences.ContactFormatPreferencePage"
+            id="com.sebulli.fakturama.preferences.contactFormatGreetingPreferencePage"
+            name="%page.contacts.format">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.NumberRangeValuesPreferencePage"
+            id="com.sebulli.fakturama.preferences.numberRangeValuesPreferencePage"
+            name="%page.numberrange">
+      </page>
+      <page
+            category="com.sebulli.fakturama.preferences.numberRangeValuesPreferencePage"
+            class="com.sebulli.fakturama.preferences.NumberRangeFormatPreferencePage"
+            id="com.sebulli.fakturama.preferences.numberRangeFormatPreferencePage"
+            name="%page.numberrange.format">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.WebShopImportPreferencePage"
+            id="com.sebulli.fakturama.webshopimport.webShopImportPreferencePage"
+            name="%page.webshop">
+      </page>
+      <page
+            category="com.sebulli.fakturama.webshopimport.webShopImportPreferencePage"
+            class="com.sebulli.fakturama.preferences.WebShopAuthorizationPreferencePage"
+            id="com.sebulli.fakturama.webshopimport.webShopAuthorizationPreferencePage"
+            name="%page.webshopauthorization">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.YourCompanyPreferencePage"
+            id="com.sebulli.fakturama.preferences.yourCompanyPreferencePage"
+            name="%page.company">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.DocumentPreferencePage"
+            id="com.sebulli.fakturama.preferences.documentPreferencePage"
+            name="%page.documents">
+      </page>
+      <page
+            category="com.sebulli.fakturama.preferences.documentPreferencePage"
+            class="com.sebulli.fakturama.preferences.OptionalItemsPreferencePage"
+            id="com.sebulli.fakturama.preferences.optionalItemsPreferencePage"
+            name="%page.optionalitems">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.OfficePreferencePage"
+            id="com.sebulli.fakturama.preferences.officePreferencePage"
+            name="%page.office">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.ExportPreferencePage"
+            id="com.sebulli.fakturama.exportsales.exportPreferencePage"
+            name="%page.export">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.GeneralPreferencePage"
+            id="com.sebulli.fakturama.preferences.generalPreferencePage"
+            name="%page.general">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.BrowserPreferencePage"
+            id="com.sebulli.fakturama.preferences.browserPreferencePage"
+            name="%page.browser">
+      </page>
+      <page
+            class="com.sebulli.fakturama.preferences.ColumnWidthPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            name="%page.columnwidth">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthContactsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthContactsPreferencePage"
+            name="%page.columnwidthcontacts">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthDocumentsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthDocumentsPreferencePage"
+            name="%page.columnwidthdocuments">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthVouchersPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthVouchersPreferencePage"
+            name="%page.columnwidthvouchers">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthItemsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthItemsPreferencePage"
+            name="%page.columnwidthitems">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthVoucherItemsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthVoucherItemsPreferencePage"
+            name="%page.columnwidthvoucheritems">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthListPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthListPreferencePage"
+            name="%page.columnwidthlist">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthPaymentsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthPaymentsPreferencePage"
+            name="%page.columnwidthpayments">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthProductsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthProductsPreferencePage"
+            name="%page.columnwidthproducts">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthShippingsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthShippingsPreferencePage"
+            name="%page.columnwidthshippings">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthTextsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthTextsPreferencePage"
+            name="%page.columnwidthtexts">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthVatPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthVatPreferencePage"
+            name="%page.columnwidthvat">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthDialogProductsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthDialogProductsPreferencePage"
+            name="%page.columnwidthdialogproducts">
+      </page>
+      <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthDialogContactsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthDialogContactsPreferencePage"
+            name="%page.columnwidthdialogcontacts">
+      </page>
+            <page
+      		category="com.sebulli.fakturama.preferences.columnWidthPreferencePage"
+            class="com.sebulli.fakturama.preferences.ColumnWidthDialogTextsPreferencePage"
+            id="com.sebulli.fakturama.preferences.columnWidthDialogTextsPreferencePage"
+            name="%page.columnwidthdialogtexts">
+      </page>
+      
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.sebulli.fakturama.perspective">
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.sebulli.fakturama.editors.ProductEditor"
+            default="false"
+            icon="icons/16/product_16.png"
+            id="com.sebulli.fakturama.editors.productEditor"
+            name="Product Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.ContactEditor"
+            default="false"
+            icon="icons/16/contact_16.png"
+            id="com.sebulli.fakturama.editors.contactEditor"
+            name="Contact Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.VatEditor"
+            default="false"
+            icon="icons/16/vat_16.png"
+            id="com.sebulli.fakturama.editors.vatEditor"
+            name="VAT Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.DocumentEditor"
+            default="false"
+            icon="icons/16/letter_16.png"
+            id="com.sebulli.fakturama.editors.documentEditor"
+            name="Document Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.ShippingEditor"
+            default="false"
+            icon="icons/16/shipping_16.png"
+            id="com.sebulli.fakturama.editors.shippingEditor"
+            name="Shipping Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.PaymentEditor"
+            default="false"
+            icon="icons/16/payment_16.png"
+            id="com.sebulli.fakturama.editors.paymentEditor"
+            name="Payment Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.TextEditor"
+            default="false"
+            icon="icons/16/text_16.png"
+            id="com.sebulli.fakturama.editors.textEditor"
+            name="Text Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.ListEditor"
+            default="false"
+            icon="icons/16/list_16.png"
+            id="com.sebulli.fakturama.editors.listEditor"
+            name="List Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.ExpenditureVoucherEditor"
+            default="false"
+            icon="icons/16/expenditure_voucher_16.png"
+            id="com.sebulli.fakturama.editors.expenditurevoucherEditor"
+            name="Expenditure Voucher Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.ReceiptVoucherEditor"
+            default="false"
+            icon="icons/16/receipt_voucher_16.png"
+            id="com.sebulli.fakturama.editors.receiptvoucherEditor"
+            name="Receipt Voucher Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.BrowserEditor"
+            default="false"
+            icon="icons/16/www_16.png"
+            id="com.sebulli.fakturama.editors.browserEditor"
+            name="Browser Editor">
+      </editor>
+      <editor
+            class="com.sebulli.fakturama.editors.ParcelServiceBrowserEditor"
+            default="false"
+            icon="icons/16/parcel_16.png"
+            id="com.sebulli.fakturama.editors.parcelServiceBrowserEditor"
+            name="ParcelService Browser Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.sebulli.fakturama.Startup"></startup>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.sebulli.fakturama.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="com.sebulli.fakturama.importWizards.csv"
+            name="CSV import">
+      </category>
+      <wizard
+            category="com.sebulli.fakturama.importWizards.csv"
+            class="com.sebulli.fakturama.importer.csv.expenditures.ImportWizard"
+            icon="icons/16/expenditure_voucher_16.png"
+            id="com.sebulli.fakturama.importer.csv.expenditures.importWizard"
+            name="%wizard.import.csv.expenditures.name">
+         <description>
+            %wizard.import.csv.expenditures.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.importWizards.csv"
+            class="com.sebulli.fakturama.importer.csv.products.ImportWizard"
+            icon="icons/16/product_16.png"
+            id="com.sebulli.fakturama.importer.csv.products.importWizard"
+            name="%wizard.import.csv.products.name">
+         <description>
+            %wizard.import.csv.products.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.importWizards.csv"
+            class="com.sebulli.fakturama.importer.csv.contacts.ImportWizard"
+            icon="icons/16/contact_16.png"
+            id="com.sebulli.fakturama.importer.csv.contacts.importWizard"
+            name="%wizard.import.csv.contacts.name">
+         <description>
+            %wizard.import.csv.contacts.description
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="com.sebulli.fakturama.intro">
+      </intro>
+      <introProductBinding
+            introId="com.sebulli.fakturama.intro"
+            productId="com.sebulli.fakturama.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="introContent.xml"
+            id="com.sebulli.fakturama.introConfigId"
+            introId="com.sebulli.fakturama.intro">
+         <presentation
+               home-page-id="%intro.root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx"
+                  style="content/shared.css">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+      <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            category="com.sebulli.fakturama.export.productandbuyers"
+            class="com.sebulli.fakturama.export.productbuyers.ExportWizard"
+            icon="icons/16/product_buyers_16.png"
+            id="com.sebulli.fakturama.export.productbuyers.exportWizard"
+            name="%wizard.export.productbuyers.name">
+         <description>
+            %wizard.export.productbuyers.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.productandbuyers"
+            class="com.sebulli.fakturama.export.buyers.ExportWizard"
+            icon="icons/16/buyers_16.png"
+            id="com.sebulli.fakturama.export.buyers.exportWizard"
+            name="%wizard.export.buyers.name">
+         <description>
+            %wizard.export.buyers.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.salesandvouchers"
+            class="com.sebulli.fakturama.export.sales.ExportWizard"
+            icon="icons/16/sales_16.png"
+            id="com.sebulli.fakturama.export.sales.exportWizard"
+            name="%wizard.export.sales.name">
+         <description>
+            %wizard.export.sales.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.salesandvouchers"
+            class="com.sebulli.fakturama.export.accounts.ExportWizard"
+            icon="icons/16/accounts_16.png"
+            id="com.sebulli.fakturama.export.accounts.exportWizard"
+            name="%wizard.export.accounts.name">
+         <description>
+            %wizard.export.accounts.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.salesandvouchers"
+            class="com.sebulli.fakturama.export.sales.ExportWizardUnpaid"
+            icon="icons/16/error_16.png"
+            id="com.sebulli.fakturama.export.sales.exportWizardUnpaid"
+            name="%wizard.export.sales.unpaid.name">
+         <description>
+            %wizard.export.sales.unpaid.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.salesandvouchers"
+            class="com.sebulli.fakturama.export.vouchers.ExportExpenditureWizard"
+            icon="icons/16/expenditure_voucher_16.png"
+            id="com.sebulli.fakturama.export.vouchers.exportExpenditureWizard"
+            name="%wizard.export.expenditurevouchers.name">
+         <description>
+            %wizard.export.expenditurevouchers.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.salesandvouchers"
+            class="com.sebulli.fakturama.export.vouchers.ExportReceiptWizard"
+            icon="icons/16/receipt_voucher_16.png"
+            id="com.sebulli.fakturama.export.vouchers.exportReceiptWizard"
+            name="%wizard.export.receiptvouchers.name">
+         <description>
+            %wizard.export.receiptvouchers.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.lists"
+            class="com.sebulli.fakturama.export.products.ExportWizard"
+            icon="icons/16/product_16.png"
+            id="com.sebulli.fakturama.export.products.exportWizard"
+            name="%wizard.export.products.name">
+         <description>
+            %wizard.export.products.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.lists"
+            class="com.sebulli.fakturama.export.contacts.ExportWizard"
+            icon="icons/16/contact_16.png"
+            id="com.sebulli.fakturama.export.contacts.exportWizard"
+            name="%wizard.export.contacts.name">
+         <description>
+            %wizard.export.contacts.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.lists/com.sebulli.fakturama.export.csv.lists"
+            class="com.sebulli.fakturama.export.csv.products.ExportWizard"
+            icon="icons/16/product_16.png"
+            id="com.sebulli.fakturama.export.csv.products.exportWizard"
+            name="%wizard.export.csv.products.name">
+         <description>
+            %wizard.export.csv.products.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.lists/com.sebulli.fakturama.export.csv.lists"
+            class="com.sebulli.fakturama.export.csv.contacts.ExportWizard"
+            icon="icons/16/contact_16.png"
+            id="com.sebulli.fakturama.export.csv.contacts.exportWizard"
+            name="%wizard.export.csv.contacts.name">
+         <description>
+            %wizard.export.csv.contacts.description
+         </description>
+      </wizard>
+      <wizard
+            category="com.sebulli.fakturama.export.lists"
+            class="com.sebulli.fakturama.export.vcf.contacts.ExportWizard"
+            icon="icons/16/vcard_16.png"
+            id="com.sebulli.fakturama.export.vcf.contacts.exportWizard"
+            name="%wizard.export.vcf.contacts.name">
+         <description>
+            %wizard.export.vcf.contacts.description
+         </description>
+      </wizard>
+      <category
+            id="com.sebulli.fakturama.export.productandbuyers"
+            name="%wizard.export.productandbuyers.category">
+      </category>
+      <category
+            id="com.sebulli.fakturama.export.salesandvouchers"
+            name="%wizard.export.salesandvouchers.category">
+      </category>
+      <category
+            id="com.sebulli.fakturama.export.lists"
+            name="%wizard.export.lists.category">
+      </category>
+      <category
+            id="com.sebulli.fakturama.export.csv.lists"
+            name="%wizard.export.csv.lists.category"
+            parentCategory="com.sebulli.fakturama.export.lists">
+      </category>
+   </extension>
+   
+
+</plugin>

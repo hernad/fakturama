@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Import / Export" link_to="toc.xml#importexport"> 
+	
+	<topic label="Import Ausgaben aus CSV Datei"  href="html/importexport/import_csv_expenditures.html"></topic>
+	<topic label="Import Kontakte aus CSV Datei"  href="html/importexport/import_csv_contacts.html"></topic>
+	<topic label="Import Produkte aus CSV Datei"  href="html/importexport/import_csv_products.html"></topic>
+	<topic label="Export Kontostand"  href="html/importexport/export_accounts.html"></topic>
+	<topic label="Export Liste Ausgabebelege"  href="html/importexport/export_expenditure_vouchers.html"></topic>
+	<topic label="Export Liste Einnahmebelege"  href="html/importexport/export_receipt_vouchers.html"></topic>
+	<topic label="Export Liste Umsätze (bezahlte Rechnungen)"  href="html/importexport/export_sales.html"></topic>
+	<topic label="Export Liste unbezahlte Rechnungen"  href="html/importexport/export_unpaid_invoices.html"></topic>
+	<topic label="Export Adressliste"  href="html/importexport/export_contacts.html"></topic>
+	<topic label="Export Adressliste als Visitenkartendatei"  href="html/importexport/export_vcf_contacts.html"></topic>
+	<topic label="Export Adressliste als CSV Datei"  href="html/importexport/export_csv_contacts.html"></topic>
+	<topic label="Export Liste Produkte"  href="html/importexport/export_products.html"></topic>
+	<topic label="Export Liste Produkte als CSV Datei"  href="html/importexport/export_csv_products.html"></topic>
+	<topic label="Export Käufer"  href="html/importexport/export_buyers.html"></topic>
+	<topic label="Export Produkte und deren Käufer"  href="html/importexport/export_products_buyers.html"></topic>
+
+</toc>

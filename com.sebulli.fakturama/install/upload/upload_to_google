@@ -1,0 +1,37 @@
+#!/bin/bash
+# Upload all files to google code
+# Usage: upload_to_google user password  v_e_rsion v.e.rsion
+# Usage: upload_to_google email@google 1234 1_5_0 1.5.0
+params=$#
+if [ $params -eq 4 ]
+then
+
+    echo "Please wait .."	
+#    ./googlecode_upload.py -s "Handbuch $4 (German Manual)"                    -p fakturama -u $1 -w $2 ./bin/Handbuch_$3.pdf                          -l Type-Docs
+
+#    ./googlecode_upload.py -s "Web Shop Connector $4 for osCommerce"           -p fakturama -u $1 -w $2 ./bin/Fakturama_Connector_OSCOMMERCE_$3.zip    -l Type-Archive,OpSys-All
+#    ./googlecode_upload.py -s "Web Shop Connector $4 for xt:Commerce"          -p fakturama -u $1 -w $2 ./bin/Fakturama_Connector_XTCOMMERCE_$3.zip    -l Type-Archive,OpSys-All
+#    ./googlecode_upload.py -s "Web Shop Connector $4 for xtcModified"          -p fakturama -u $1 -w $2 ./bin/Fakturama_Connector_XTCMODIFIED_$3.zip   -l Type-Archive,OpSys-All
+
+
+#    ./googlecode_upload.py -s "Fakturama $4 for Linux 32Bit as Debian Package" -p fakturama -u $1 -w $2 ./bin/Fakturama_Linux_32Bit_$3.deb             -l Type-Package,OpSys-Linux,Architecture-32
+#    ./googlecode_upload.py -s "Fakturama $4 for Linux 64Bit as Debian Package" -p fakturama -u $1 -w $2 ./bin/Fakturama_Linux_64Bit_$3.deb             -l Type-Package,OpSys-Linux,Architecture-64
+
+#    ./googlecode_upload.py -s "Fakturama $4 for Linux 32Bit as File Archive"   -p fakturama -u $1 -w $2 ./bin/Fakturama_$3_Linux_32Bit.tar.gz          -l Type-Archive,OpSys-Linux,Architecture-32
+#    ./googlecode_upload.py -s "Fakturama $4 for Linux 64Bit as File Archive"   -p fakturama -u $1 -w $2 ./bin/Fakturama_$3_Linux_64Bit.tar.gz          -l Type-Archive,OpSys-Linux,Architecture-64
+
+#    ./googlecode_upload.py -s "Fakturama $4 for Mac OS X Carbon X86 (32Bit) as File Archive"  -p fakturama -u $1 -w $2 ./bin/Fakturama_$3_macosx.carbon.x86.tar.gz -l Type-Archive,OpSys-OSX,Architecture-32
+#    ./googlecode_upload.py -s "Fakturama $4 for Mac OS X Cocoa PPC (32Bit) as File Archive"   -p fakturama -u $1 -w $2 ./bin/Fakturama_$3_macosx.cocoa.ppc.tar.gz  -l Type-Archive,OpSys-OSX,Architecture-32
+#    ./googlecode_upload.py -s "Fakturama $4 for Mac OS X Cocoa X86 (32Bit) as File Archive"   -p fakturama -u $1 -w $2 ./bin/Fakturama_$3_macosx.cocoa.x86.tar.gz  -l Type-Archive,OpSys-OSX,Architecture-32
+
+#    ./googlecode_upload.py -s "Fakturama $4 for Mac OS X 64Bit"                -p fakturama -u $1 -w $2 ./bin/Fakturama_OS_X_64Bit_$3.dmg              -l Type-Installer,OpSys-OSX,Architecture-64
+
+#    ./googlecode_upload.py -s "Fakturama $4 for Windows 32Bit"                 -p fakturama -u $1 -w $2 ./bin/Fakturama_Win_32Bit_$3.zip               -l Type-Installer,OpSys-Windows,Architecture-32
+#    ./googlecode_upload.py -s "Fakturama $4 for Windows 64Bit"                 -p fakturama -u $1 -w $2 ./bin/Fakturama_Win_64Bit_$3.zip               -l Type-Installer,OpSys-Windows,Architecture-64
+
+
+
+else
+    echo "upload_to_google user password v_e_rsion v.e.rsion"
+    echo "upload_to_google email@google 1234 1_5_0 1.5.0"
+fi

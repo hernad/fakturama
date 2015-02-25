@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Platzhalter der Summenfelder</title>
+        <link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+        <h1>Platzhalter der Summenfelder</h1>
+        <p>Die Platzhalter für die <b>Zwischensumme der Artikel</b>, für <b>Versandkosten</b> und die <b>Gesamtsumme</b>
+        sind allgemeine Platzhalter.</p>
+        <p class="see">Siehe auch <a href="placeholders_common.html">Allgemeine Platzhalter</a></p>
+        <p>Die Platzhalter für <b>Rabatt</b> und die <b>Anteile der Mehrwertsteuer</b> haben eine erweiterte Funktionalität
+        und müssen in eine zweispaltige Tabelle gesetzt werden.</p>
+        <img class="icon" src="placeholders_sum.png" alt="" /> <br />
+
+        <h2>ITEMS.DISCOUNT.PERCENT</h2>
+        <p>Rabatt auf alle Artikel (% Wert).</p>
+
+        <h2>ITEMS.DISCOUNT.NET</h2>
+        <p>Rabatt auf alle Artikel (netto).</p>
+
+        <h2>ITEMS.DISCOUNT.GROSS</h2>
+        <p>Rabatt auf alle Artikel (brutto).</p>
+
+        <p>Diese drei Platzhalter für <b>Rabatt auf alle Artikel</b> haben die Besonderheit, dass für den Fall
+        <b>kein Rabatt (0%)</b> die komplette Zeile der Tabelle gelöscht wird.</p>
+         
+        <h2>VATLIST.DESCRIPTIONS</h2>
+        <p>Liste mit allen Steuersätzen (Beschreibung).</p>
+
+        <h2>VATLIST.VALUES</h2>
+        <p>Liste mit allen Steuersätzen (Werte).</p>
+
+    <p>Diese zwei Platzhalter für <b>Liste mit allen Steuersätzen</b> haben die Besonderheit,
+    dass für jeden weiteren Steuersatz eine neue Zeile der Tabelle angelegt wird.</p>
+
+        <h2>VATLIST.PERCENT</h2>
+        <p>Liste mit allen Steuersätzen (Prozent).</p>
+
+        <h2>VATLIST.VATSUBTOTAL</h2>
+        <p>Liste aller zum jeweiligen MwSt.-Prozentsatz gehörenden Nettowerte
+(Zwischensummen).</p>
+
+<p><i>Beispiel</i> bei unterschiedlichen Mehrwertsteuersätzen:
+<br />
+Zuzügl. &lt;VATLIST.DESCRIPTIONS&gt; auf &lt;VATLIST.VATSUBTOTAL&gt;
+&lt;VATLIST.VALUES&gt;
+<br />
+Bitte für jeden der Platzhalter eine einzelne Tabellenzelle in ein und derselben Zeile verwenden!</p>
+
+	<h2>DOCUMENT.DEPOSIT.DEP_TEXT</h2>
+	<p>Text der Teilzahlung, z.B. "Anzahlung:"</p>
+	
+	<h2>DOCUMENT.DEPOSIT.FINALPMT_TEXT</h2>
+	<p>Text des Rechnungsbetrags abz&uuml;glich Teilzahlung, z.B. "Restbetrag"</p>
+	
+	<h2>DOCUMENT.DEPOSIT.DEPOSIT</h2>
+	<p>Der Teilzahlungsbetrag</p>
+	
+	<h2>DOCUMENT.DEPOSIT.FINALPAYMENT</h2>
+	<p>Der Rechnungsbetrag abz&uuml;glich Teilzahlung.</p>
+	
+	<p><i>Beispiel</i> <img src="template_deposit.png" /><br />
+	Wichtig: Die Platzhalter m&uuml;ssen in eine zweispaltige Tabelle gesetzt werden. 
+	Der Text f&uuml;r die Platzhalter <i>DOCUMENT.DEPOSIT.DEP_TEXT</i> und <i>DOCUMENT.DEPOSIT.FINALPMT_TEXT</i> 
+	kann in den Preferences eingestellt werden:
+	<br />
+	<img src="preferences_deposit.png" />
+</p>
+
+</body>
+</html>
+

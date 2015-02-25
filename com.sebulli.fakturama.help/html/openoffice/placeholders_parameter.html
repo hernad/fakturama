@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Platzhalter mit Parameter</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Platzhalter mit Parametern</h1>
+	<p>Bei allen allgemeinen Platzhalter dürfen zusätzliche Parameter angegeben werden.
+	Diese starten mit einem Dollarzeichen "<b>$</b>", dem Parameternamen und einem Doppelpunkt "<b>:</b>".</p>
+	<p>Beispiel: Ist die Lieferadresse leer, wird der Text <b>Siehe Rechnungsadresse</b> angezeigt:</p>
+	<p><b>&lt;DOCUMENT.DELIVERYADDRESS$EMPTY:Siehe Rechnungsadresse&gt;</b></p>
+
+	<h2>EMPTY</h2>
+	<p>Dieser Text wird an der Stelle des Platzhalters angezeigt, wenn der Platzhaltertext leer ist.</p>
+
+	<h2>PRE</h2>
+	<p>Dieser Text wird vor dem Platzhaltertext angezeigt. Jedoch nur dann, wenn dieser nicht leer ist.</p>
+
+	<h2>POST</h2>
+	<p>Dieser Text wird nach dem Platzhaltertext angezeigt. Jedoch nur dann, wenn dieser nicht leer ist.</p>
+
+	<h2>INONELINE</h2>
+	<p>Stellt einen mehrzeiligen Text in einer einzigen Zeile dar. Anstatt der Zeilenumbrüche wird
+	die angegebene Zeichenkette verwendet.</p>
+
+	<h2>REPLACE</h2>
+	<p>Ersetzt den Platzhaltertext durch einen anderen. Es wird eine Liste mit allen möglichen Ersetzungen
+	angebenen. Die Liste muss in geschweifte Klammern eingeschlossen sein. Alle Listenelemente sind durch
+	ein Semikolon getrennt. Jedes Listenelement besteht aus einem Schlüssel und dem zu ersetzenden Text.
+	Beide wiederum durch ein Komma getrennt.</p>
+
+	<p>Beispiel: Ein <b>DE</b> würde durch den Text <b>Deutschland</b> ersetzt werden, ein <b>CH</b> durch <b>Schweiz</b>:</p>
+	<p><b>&lt;ADDRESS.COUNTRY.CODE2$REPLACE:{DE,Deutschland;CH,Schweiz}&gt;</b></p>
+    <p>Soll das Komma "<b>,</b>" ersetzt werden, so ist dafür der Platzhalter <b>%COMMA</b> zu verwenden.</p>
+
+	<h2>FORMAT</h2>
+	<p>Das Format kann bei Zahlenangaben festgelegt werden.</p>
+	<p>Beispiele:</p>
+	<ul>
+		<li><b>$FORMAT:0.00</b> Die Menge 1 wird mit 2 Nachkommastellen als 1.00 dargestellt</li>
+		<li><b>$FORMAT:0</b> Die Menge 3.1 wird ohne Nachkommastellen als 3 dargestellt</li>
+	</ul>
+
+	<h2>WIDTH, HEIGHT</h2>
+
+	<p>Bei Produktbildern kann die Bildgröße (Breite und Höhe in Pixel) angegeben werden.</p>
+	<p>Beispiel:</p>
+	<p><b>ITEM.PICTURE$WIDTH:200$HEIGHT:150</b> Produktbild wird 200 x 150 Pixel groß.</p>
+
+
+	<h2>Sonderzeichen</h2>
+	<p>Um in den Parametern auch spezielle Sonderzeichen verwenden zu können, werden diese extra kodiert:</p>
+
+	<ul>
+		<li><b>%LT</b> für <b>&lt;</b></li>
+		<li><b>%GT</b> für <b>&gt;</b></li>
+		<li><b>%NL</b> für <b>Neue Zeile</b></li>
+		<li><b>%TAB</b> für <b>Tabspace</b></li>
+		<li><b>%DOLLAR</b> für <b>$</b></li>
+		<li><b>%A_GRAVE</b> für <b>À</b></li>
+		<li><b>%A_ACUTE</b> für <b>Á</b></li>
+		<li><b>%A_CIRC</b> für <b>Â</b></li>
+		<li><b>%A_TILDE</b> für <b>Ã</b></li>
+		<li><b>%A_RING</b> für <b>Å</b></li>
+		<li><b>%C_CED</b> für <b>Ç</b></li>
+		<li><b>%E_GRAVE</b> für <b>È</b></li>
+		<li><b>%E_ACUTE</b> für <b>É</b></li>
+		<li><b>%E_CIRC</b> für <b>Ê</b></li>
+		<li><b>%I_GRAVE</b> für <b>Ì</b></li>
+		<li><b>%I_ACUTE</b> für <b>Í</b></li>
+		<li><b>%I_CIRC</b> für <b>Î</b></li>
+		<li><b>%O_GRAVE</b> für <b>Ò</b></li>
+		<li><b>%O_ACUTE</b> für <b>Ó</b></li>
+		<li><b>%O_CIRC</b> für <b>Ô</b></li>
+		<li><b>%O_TILDE</b> für <b>Õ</b></li>
+		<li><b>%O_STROKE</b> für <b>Ø</b></li>
+		<li><b>%U_GRAVE</b> für <b>Ù</b></li>
+		<li><b>%U_ACUTE</b> für <b>Ú</b></li>
+		<li><b>%U_CIRC</b> für <b>Û</b></li>
+		<li><b>%a_GRAVE</b> für <b>à</b></li>
+		<li><b>%a_ACUTE</b> für <b>á</b></li>
+		<li><b>%a_CIRC</b> für <b>â</b></li>
+		<li><b>%a_TILDE</b> für <b>ã</b></li>
+		<li><b>%a_RING</b> für <b>å</b></li>
+		<li><b>%c_CED</b> für <b>ç</b></li>
+		<li><b>%e_GRAVE</b> für <b>è</b></li>
+		<li><b>%e_ACUTE</b> für <b>é</b></li>
+		<li><b>%e_CIRC</b> für <b>ê</b></li>
+		<li><b>%i_GRAVE</b> für <b>ì</b></li>
+		<li><b>%i_ACUTE</b> für <b>í</b></li>
+		<li><b>%i_CIRC</b> für <b>î</b></li>
+		<li><b>%n_TILDE</b> für <b>ñ</b></li>
+		<li><b>%o_GRAVE</b> für <b>ò</b></li>
+		<li><b>%o_ACUTE</b> für <b>ó</b></li>
+		<li><b>%o_CIRC</b> für <b>ô</b></li>
+		<li><b>%o_TILDE</b> für <b>õ</b></li>
+		<li><b>%u_GRAVE</b> für <b>ù</b></li>
+		<li><b>%u_ACUTE</b> für <b>ú</b></li>
+		<li><b>%u_CIRC</b> für <b>û</b></li>
+	</ul>
+
+	<p class="see">Siehe auch <a href="placeholders_common.html">Allgemeine Platzhalter</a></p>
+	<p class="see">Siehe auch <a href="placeholders_itemtable.html">Platzhalter der Artikeltabelle</a></p>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Export Adressliste als Visitenkartendatei</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Export Adressliste als Visitenkartendatei</h1>
+	<p>Exportiert eine Liste mit allen Kontakten in eine VCard Visitenkartendatei.</p>
+	<p>Diese Datei lässt sich von vielen Adressbuchprogrammen wieder einlesen.</p>
+	<p class="code">
+		BEGIN:VCARD<br />
+		VERSION:3.0<br />
+		N:Mustermann;Max<br />
+		FN:Max Mustermann<br />
+		ADR;TYPE=home:;;Hauptstrasse 13a;Berlin;;11223;Deutschland<br />
+		ADR;TYPE=postal:;;Hauptstrasse 13a;Berlin;;11223;Deutschland<br />
+		ADR;TYPE=other;;Hauptstrasse 13a;Berlin;;11223;Deutschland<br />
+		TEL;TYPE=HOME,WORK,VOICE:01234 12345<br />
+		TEL;TYPE=HOME,WORK,FAX:01234 12346<br />
+		TEL;TYPE=HOME,WORK,CELL:0171 12345<br />
+		EMAIL;TYPE=internet:max@mustermann.net<br />
+		URL:www.sebulli.com<br />
+		NOTE:<br />
+		CATEGORIES:Shop Kunden<br />
+		END:VCARD
+	</p>
+
+
+</body>
+</html>	

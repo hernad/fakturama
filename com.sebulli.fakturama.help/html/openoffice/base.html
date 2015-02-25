@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Verbindung zu Datenbank mit Base</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Verbindung zu Datenbank mit Base</h1>
+	<p>Verbindung zu Datenbank von Fakturama mit 
+	OpenOffice.org/LibreOffice Base kann vorteilhaft sein, 
+	wenn man erweiterte Datenbankabfragen durchführen will.</p>
+	
+	<h2>hsqldb in OpenOffice.org/LibreOffice aktivieren</h2>
+	<p>Als Vorbereitung erst hsqldb in OpenOffice.org/LibreOffice aktivieren:
+	<ul TYPE="DISC">
+	<LI>Lade letzte Version von hsqldb <a href="http://hsqldb.org/">http://hsqldb.org/</a> - Downloads
+	<LI>Entpacken der Zip-Datei
+	<LI>In <i>"Extras – Optionen... – Erweitert – Class-Pfad... - Archiv Hinzufügen"</i> wird der hsqldb.jar zugefügt
+	</ul>
+	</p>
+	
+	<img src="base_hsqldb.png" />
+	
+	<p>Dann OpenOffice.org/LibreOffice Neustarten.</p>
+	
+	<p>Mittels der JDBC wird der Datenbank von Fakturama auf folgenden Weise angebunden:
+	<ul TYPE="DISC">
+		<li>Neue Datenbank anlegen
+		<li>"Datenbank auswählen – Verbindung zu bestehenden Datenbank herstellen"
+		<ul TYPE="CIRCLE">
+			<li>"JDBC" auswählen und "Weiter"
+		</ul>
+		<li>In Datenbankeingeschaften URL der Datenquelle:
+		<ul TYPE="CIRCLE">
+			<li>hsqldb:file: <i>"Dateiname"</i> 
+			<li>Bemerkung: Dateiname muss ohne Anführungszeichen sein obwohl es Leerzeichen enthält.
+		</ul>
+		<li>JDBC-Treiberklasse: org.hsqldb.jdbc.Driver
+	</ul>
+	</p>
+		
+	<img src="base_jdbc.png" />
+	<br />
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Fakturama Handbuch" topic="html/toc.html">
+   <topic label="Schnelleinstieg" href="html/quickguide/main.html">
+      <anchor id="quickguide"/>
+   </topic>
+   <topic label="Installation" href="html/install/main.html">
+      <anchor id="install"/>
+   </topic>
+   <topic label="Das Programm" href="html/application/main.html">
+      <anchor id="application"/>
+   </topic>
+   <topic label="OpenOffice.org / LibreOffice" href="html/openoffice/main.html">
+      <anchor id="openoffice"/>
+   </topic>
+   <topic label="Webshop" href="html/webshop/webshop.html">
+      <anchor id="webshop"/>
+   </topic>
+   <topic label="Paketdienst" href="html/parcelservice/main.html">
+      <anchor id="parcelservice"/>
+   </topic>
+   <topic label="Arbeitsverzeichnis" href="html/workspace/workspace.html">
+      <anchor id="workspace"/>
+   </topic>
+   <topic label="Import / Export" href="html/importexport/main.html">
+      <anchor id="importexport"/>
+   </topic>
+   <topic label="Einstellungen" href="html/preferences/main.html">
+      <anchor id="preferences"/>
+   </topic>
+   <topic label="Lizenz" href="html/license/license.html">
+      <anchor id="license"/>
+   </topic>
+</toc>

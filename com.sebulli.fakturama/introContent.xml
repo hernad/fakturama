@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+    <page id="root" content="intro/root.xhtml"/>
+    <page id="root_de" content="intro/root_de.xhtml"/>
+    <page id="root_hu" content="intro/root_hu.xhtml"/>
+    <page id="root_it" content="intro/root_it.xhtml"/>
+    <page id="root_ro" content="intro/root_ro.xhtml"/>
+    <page id="root_ru" content="intro/root_ru.xhtml"/>
+    <page id="root_uk" content="intro/root_uk.xhtml"/>
+    <page id="root_es" content="intro/root_es.xhtml"/>
+</introContent>

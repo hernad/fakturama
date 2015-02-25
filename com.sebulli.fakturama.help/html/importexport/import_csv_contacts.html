@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Kontakte aus CSV Datei importieren</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Kontakte aus CSV-Datei importieren</h1>
+	<p>Adressdaten können aus einer CSV-Datei in Fakturama importiert werden.
+	Damit ist eine Datenübernahme aus einem anderen Programm möglich. Die Datei muss im Format UTF-8 vorliegen
+	und durch Semikolon getrennt sein. Zeichenketten sind in Hochkommata einzuschließen.
+	Beispiel:</p>
+
+	<p class="code"><pre>
+"category";"gender";"title";"firstname";"name";"company";"street";"zip";"city";"country";"delivery_gender";"delivery_title";"delivery_firstname";"delivery_name";"delivery_company";"delivery_street";"delivery_zip";"delivery_city";"delivery_country";"account_holder";"account";"bank_code";"bank_name";"iban";"bic";"nr";"note";"date_added";"payment";"reliability";"phone";"fax";"mobile";"email";"website";"vatnr";"vatnrvalid";"discount"
+"Shop Kunden";"Frau";"";"Lisa";"Lausser";"";"Langerweg 19";"12345";"Lausburg";"Germany";"Frau";"";"Lisa";"Lausser";"";"Langerweg 19";"12345";"Lausburg";"Germany";"";"";"";"";"";"";"1";"";"";"Barzahlung";"---";"07889 110223";"";"";"lisalausser@web.de";"";"";0;"0,00"
+"Shop Kunden";"Herr";"";"Max";"Mustermann";"";"Musterstrasse 42";"10000";"Berlin";"Germany";"Herr";"";"Max";"Mustermann";"";"Musterstrasse 42";"10000";"Berlin";"Germany";"";"";"";"";"";"";"2";"";"";"Barzahlung";"---";"01234 567890";"";"";"maxmustermann@web.de";"";"";0;"0,00"
+	</pre></p>
+
+	<p>Die zu importierenden Daten müssen in einer CSV-Datei vorliegen und folgende Spalten beinhalten:</p>
+	<dl>
+		<dt>category</dt><dd> Kategorie, in die der Kontakt einsortiert wird. Zum Beispiel "Shop Kunden", "Lieferanten"</dd>
+		<dt>gender</dt><dd> Geschlecht. "Herr" oder "Frau".</dd>
+		<dt>title</dt><dd> Zusätzlicher Titel.</dd>
+		<dt>firstname</dt><dd> Vorname</dd>
+		<dt>name</dt><dd> Nachname</dd>
+		<dt>company</dt><dd> Firma</dd>
+		<dt>street</dt><dd> Strasse und Hausnummer</dd>
+		<dt>zip</dt><dd> PLZ</dd>
+		<dt>city</dt><dd> Ort</dd>
+		<dt>country</dt><dd> Land</dd>
+		<dt>delivery_gender</dt><dd> Lieferanschrift - Geschlecht. "Herr" oder "Frau".</dd>
+		<dt>delivery_title</dt><dd> Lieferanschrift - Zusätzlicher Titel.</dd>
+		<dt>delivery_firstname</dt><dd> Lieferanschrift - Vorname</dd>
+		<dt>delivery_name</dt><dd> Lieferanschrift - Nachname</dd>
+		<dt>delivery_company</dt><dd> Lieferanschrift - Firma</dd>
+		<dt>delivery_street</dt><dd> Lieferanschrift - Strasse und Hausnummer</dd>
+		<dt>delivery_zip</dt><dd> Lieferanschrift - PLZ</dd>
+		<dt>delivery_city</dt><dd> Lieferanschrift - Ort</dd>
+		<dt>delivery_country</dt><dd> Lieferanschrift - Land</dd>
+		<dt>account_holder</dt><dd> Kontoinhaber</dd>
+		<dt>account</dt><dd> Kontonummer</dd>
+		<dt>bank_code</dt><dd> Bankleitzahl</dd>
+		<dt>bank_name</dt><dd> Name der Bank</dd>
+		<dt>iban</dt><dd> IBAN</dd>
+		<dt>bic</dt><dd> BIC</dd>
+		<dt>nr</dt><dd> Kunden/Lieferantennummer</dd>
+		<dt>note</dt><dd> Notiz</dd>
+		<dt>date_added</dt><dd> Datum, an dem der Kunde angelegt wurde, oder leer.</dd>
+		<dt>reliability</dt><dd>Bonität ("---", "schlecht", "mittel" oder "gut")</dd>
+		<dt>phone</dt><dd> Telefonnummer</dd>
+		<dt>fax</dt><dd> Telefaxnummer</dd>
+		<dt>mobile</dt><dd> Telefonnummer Mobiltelefon</dd>
+		<dt>email</dt><dd> Email</dd>
+		<dt>website</dt><dd> Webseite</dd>
+		<dt>vatnr</dt><dd> USt.IdNr.</dd>
+		<dt>vatnrvalid</dt><dd> USt.IdNr. gültig. 0 = ungültig oder nicht geprüft, 1 = geprüft und gültig</dd>
+		<dt>discount</dt><dd> Rabatt, der diesem Kunden gewährt wird.</dd>
+	</dl>
+
+	<p>Es wird empfohlen, den Import zuerst mit einer Tabelle aus nur 2-3 Einträgen zu testen, bevor die ganze Tabelle importiert wird.
+	Bei einem fehlerhaften Import muss ansonsten jeder Kontakt einzeln gelöscht werden.</p>
+
+	<p class="see">Siehe auch <a href="export_csv_contacts.html">Export Adressliste als CSV Datei</a></p>
+
+
+</body>
+</html>

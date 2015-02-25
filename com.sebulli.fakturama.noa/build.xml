@@ -1,0 +1,474 @@
+<!--
+/****************************************************************************
+ * ubion.ORS - The Open Report Suite                                        *
+ *                                                                          *
+ * ======================================================================== *
+ *                                                                          *
+ * Subproject: NOA (Nice Office Access)                                     *
+ *                                                                          *
+ *                                                                          *
+ * The Contents of this file are made available subject to                  *
+ * the terms of GNU Lesser General Public License Version 2.1.              *
+ *                                                                          * 
+ * GNU Lesser General Public License Version 2.1                            *
+ * ======================================================================== *
+ * Copyright 2003-2007 by IOn AG                                            *
+ *                                                                          *
+ * This library is free software; you can redistribute it and/or            *
+ * modify it under the terms of the GNU Lesser General Public               *
+ * License version 2.1, as published by the Free Software Foundation.       *
+ *                                                                          *
+ * This library is distributed in the hope that it will be useful,          *
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of           *
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU        *
+ * Lesser General Public License for more details.                          *
+ *                                                                          *
+ * You should have received a copy of the GNU Lesser General Public         *
+ * License along with this library; if not, write to the Free Software      *
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,                    *
+ * MA  02111-1307  USA                                                      *
+ *                                                                          *
+ * Contact us:                                                              *
+ *  http://www.ion.ag                                                       *
+ *  info@ion.ag                                                             *
+ *                                                                          *
+ ****************************************************************************/
+-->
+<!-- ================================================================= -->
+<!-- This file is an ANT build script. ANT is a Java based build tool. -->
+<!-- It is availale from http://jakarta.apache.org/ant/                -->
+<!-- ================================================================= -->
+<!--                                                                   -->
+<!--                    (c) IOn AG 2001 / er                           -->
+<!--                                                                   
+  
+                        $Author: markus $
+                        $Revision: 11692 $
+                        $Date: 2008-12-15 13:33:30 +0100 (Mo, 15 Dez 2008) $
+  
+
+-->
+<!-- ================================================================= -->
+<project name="NOA" default="usage" basedir="." >
+  
+  <!--property name="build.compiler"   value="jikes"/--> 
+
+  <!-- =================================================================== -->
+  <!-- Help on usage                                                       -->
+  <!-- =================================================================== -->
+  <target name="usage" depends="init">
+    <echo message=""/>
+    <echo message=""/>
+    <echo message="${projectName} build file"/>
+    <echo message="-------------------------------------------------------------"/>
+    <echo message=""/>
+    <echo message=" available targets are:"/>
+    <echo message=""/>
+    <echo message="   build        --> compiles all source files to the ${build.dest}"/>
+    <echo message="   jar          --> generates all jar files in the directory ${build.lib}"/>
+    <echo message="   javadoc      --> generates the API documentation (java 1.2 only)"/>
+    <echo message="   javadoc.zip  --> creates file ${javadoc.zip} with entire javadoc"/>
+  	<echo message="   deploy 	   --> creates a deployment of ${projectName}"/>
+  	<echo message="   deploy.src   --> creates a source deployment of ${projectName}"/>
+    <echo message=""/>
+    <echo message=" See the comments inside the build.xml file for more details."/>
+    <echo message="-------------------------------------------------------------"/>
+    <echo message=""/>
+    <echo message=""/>
+  </target>
+
+  <!-- ================================================================= -->
+  <!-- Initialize variables                                              -->
+  <!-- NOTE: all directories are relative to ./.                         -->
+  <!-- ================================================================= -->
+  <target name="init">
+    <tstamp />
+    
+    <property name="projectName" 							value="NOA (Nice Office Access)"/>
+    <property name="namePrefix"           					value="noa"/>       
+    <property name="name" 									value="com.sebulli.fakturama.ag.ion.noa"/>
+  	<property name="testAppendix" 									value="test"/>
+    <property name="version" 								value="2.2.404"/>
+    <property name="year" 									value="2003-2014"/>
+
+    <echo message="----------------- ${projectName} ${version} [${year}] -----------------"/>
+    
+	<property name="compiler"             					value="modern"/>
+  	<property name="sourceVersion"             		        value="1.5"/>
+  	<property name="target"             		           value="1.5"/>
+    <property name="debug" 									value="on"/>
+    <property name="optimize" 								value="off"/>
+    <property name="deprecation" 							value="off"/>
+
+  	<property name="classes.dir"						value="build/classes"/>	
+    <property name="bin.dir" 								value="bin"/>
+    <property name="src.dir" 								value="src"/>
+    <property name="docs.dir"								value="docs"/>
+  	<property name="test.dir"								value="test"/>
+    <property name="javadoc.dir"							value="${docs.dir}/api"/>
+    <property name="javadoc.zip"							value="${docs.dir}/javadocs.zip"/>
+    <property name="lib.dir" 								value="lib"/>
+    <property name="conf.dir" 								value="etc"/>
+    <property name="build.dir" 								value="build"/>
+    <property name="build.dest" 							value="build/classes"/>
+    <property name="build.lib" 								value="build/lib"/>
+		<property name="examples.dir" 							value="examples"/>
+  	
+  	<property name="deploy.dir" 									value="deploy"/>
+  	<property name="deploy.build.dir" 						value="${deploy.dir}/${name}-${version}"/>
+  	<property name="deploy.tar.name" 							value="${name}-${version}.tar"/>
+  	<property name="deploy.gzip.name" 						value="${name}-${version}.tar.gz"/>
+  	<property name="deploy.zip.name" 							value="${name}-${version}.zip"/>
+  	<property name="deploy.all.jar.name" 					value="${name}_all_${version}.jar"/>
+
+  	<property name="deploy.test.build.dir" 						value="${deploy.dir}/${name}-${testAppendix}-${version}"/>
+  	<property name="deploy.test.tar.name" 						value="${name}-${testAppendix}-${version}.tar"/>
+  	<property name="deploy.test.gzip.name" 						value="${name}-${testAppendix}-${version}.tar.gz"/>
+  	<property name="deploy.test.zip.name" 						value="${name}-${testAppendix}-${version}.zip"/>
+  	
+  	<property name="deploy.src.dir" 						value="deploy-src"/>
+  	<property name="deploy.src.build.dir" 					value="${deploy.src.dir}/${name}-src-${version}"/>
+  	<property name="deploy.src.tar.name" 					value="${name}-src-${version}.tar"/>
+  	<property name="deploy.src.gzip.name" 					value="${name}-src-${version}.tar.gz"/>
+  	<property name="deploy.src.zip.name" 					value="${name}-src-${version}.zip"/>
+  	
+    <property name="zip.src"              					value="${name}{version}-src.zip"/>
+  	
+  	<property name="jar.name"      							value="${name}_${version}.jar"/>   
+  </target>
+  <!-- =================================================================== -->
+  <!-- Prepares the build directory and set filesets                       -->
+  <!-- =================================================================== -->
+  <target name="prepare" depends="init">
+    <echo message="Preparing the build directories"/>
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${build.dest}"/>
+    <mkdir dir="${build.lib}"/>
+		
+	<path id="build.classpath">
+        <fileset dir="lib">
+            <patternset id="lib.pattern" >
+            	<include name="*.jar"/>
+            </patternset>
+        </fileset>
+	</path>
+
+	<fileset dir="${build.dest}">
+    	<patternset id="class.files" >
+			<include name="**/*.class"/>
+	        <exclude name="**/CVS/**"/>
+	     </patternset>
+	</fileset>
+
+	<fileset dir="${build.dest}">
+        <patternset id="class.files" >
+			<include name="**/*.class"/>
+	        <exclude name="**/CVS/**"/>
+	    </patternset>
+	</fileset>
+  </target>  
+  <!-- ================================================================= -->
+  <!-- Removes all generated output					                             -->
+  <!-- ================================================================= -->
+  <target name="clean">
+  	<echo message="Removing ${build.dir}"/>
+    <delete dir="${build.dir}"/>
+  </target>  
+  <!-- ================================================================= -->
+  <!-- Compiles all class files.                                          -->
+  <!-- ================================================================= -->
+  <target name="compile" depends="prepare">
+    <javac srcdir="${src.dir}" 
+					 destdir="${build.dest}"
+					 debug="${debug}"
+					 deprecation="${deprecation}"
+					 optimize="${optimize}"
+					 includes="**/*.java"
+					 excludes="**/CVS/**"
+	 		 		source="${sourceVersion}"
+	  	 		target="${target}">
+		  <classpath refid="build.classpath"/>
+    </javac>
+  	<copy todir="${build.dest}">
+  	  	<fileset dir="${src.dir}">
+  	  		<exclude name="**/*.java"/>
+  		</fileset>
+  	 </copy> 
+  </target>
+  <!-- ================================================================= -->
+  <!-- Builds all class files.                                           -->
+  <!-- ================================================================= -->
+  <target name="build" depends="clean, compile"/>  
+  <!-- ================================================================= -->
+  <!-- Creates all jar packages											 										 -->					          
+  <!-- ================================================================= -->
+  <target name="jar" depends="build">
+    <echo message="Creating archive for ${projectName} file ${build.lib}/${jar.name}"/>
+    <tstamp>
+      <format property="ts" pattern="yyyyMMdd-HHmmss-z"/>
+    </tstamp>
+    <jar jarfile="${build.lib}/${jar.name}"
+         basedir="${build.dest}"
+         includes="**/*.*"
+    	 excludes="**/test/*.class">
+    <manifest>        
+        <attribute name="Implementation-Title" value="${projectName}"/>
+        <attribute name="Implementation-Version" value="${version}"/>
+        <attribute name="Implementation-Vendor" value="IOn AG (http://www.ion.ag/)"/>
+        <attribute name="Build-Id" value="${ts} (${user.name} [${os.name} ${os.version} ${os.arch}])"/>
+    </manifest>
+    </jar>
+  </target>
+  <!-- ================================================================= -->
+  <!-- Creates all jar test packages											 										 -->					          
+  <!-- ================================================================= -->
+  <target name="jar-test" depends="build">
+    <echo message="Creating archive for ${projectName} file ${build.lib}/${jar.name}"/>
+    <tstamp>
+      <format property="ts" pattern="yyyyMMdd-HHmmss-z"/>
+    </tstamp>
+    <jar jarfile="${build.lib}/${jar.name}"
+         basedir="${build.dest}"
+         includes="**/*.*">
+    <manifest>        
+        <attribute name="Implementation-Title" value="${projectName}"/>
+        <attribute name="Implementation-Version" value="${version}"/>
+        <attribute name="Implementation-Vendor" value="IOn AG (http://www.ion.ag/)"/>
+        <attribute name="Build-Id" value="${ts} (${user.name} [${os.name} ${os.version} ${os.arch}])"/>
+    </manifest>
+    </jar>
+  </target>
+  <!-- ================================================================= -->
+  <!-- This target builds all documentations.                             -->
+  <!-- ================================================================= -->
+  <target name="docs" depends="javadoc">
+  </target>
+  <!-- ================================================================= -->
+  <!-- This target builds the javadoc files.                             -->
+  <!-- ================================================================= -->
+  <target name="javadoc" depends="init">
+    <mkdir dir="${javadoc.dir}" />
+      <javadoc packagenames="ag.ion.*"
+             sourcepath="${src.dir}"
+             destdir="${javadoc.dir}"
+             author="true"
+             version="true"
+             windowtitle="${projectName} Documentation"
+             doctitle="${projectName}"
+             bottom="Copyright &#169; ${year} IOn AG. All Rights Reserved.">
+      <classpath>
+        <pathelement location="${build.dest}"/>
+        <fileset dir="${lib.dir}">
+          <include name="**/*.jar"/>
+        </fileset>
+      </classpath>
+    </javadoc>		
+  </target>
+  <!-- ================================================================= -->
+  <!-- Zips Javadoc directory                                               -->
+  <!-- ================================================================= -->  
+  <target name="zipjavadoc" depends="init">
+    <delete file="${javadoc.zip}"/>
+    <zip zipfile="${javadoc.zip}">
+        <fileset dir="${docs.dir}" casesensitive="yes" >
+          <patternset id="api" >
+            <include name="api/**/*.*"/>
+          </patternset>
+        </fileset>         
+    </zip>     
+  </target>
+  <!-- ================================================================= -->
+  <!-- Creates deployment                                                 -->
+  <!-- ================================================================= -->  
+  <target name="deploy" depends="jar, javadoc">
+  	<delete dir="${deploy.build.dir}"/>  
+  	<delete file="${deploy.dir}/${deploy.tar.name}"/>  
+  	<delete file="${deploy.dir}/${deploy.gzip.name}"/> 
+  	<delete file="${deploy.dir}/${deploy.zip.name}"/> 
+  	
+  	<mkdir dir="${deploy.build.dir}/${lib.dir}"/>
+  	<copy todir="${deploy.build.dir}/${lib.dir}">
+  		<fileset dir="${lib.dir}"/>
+  	</copy>
+  	<copy file="${build.lib}/${jar.name}" todir="${deploy.build.dir}/${lib.dir}"/>
+  	<mkdir dir="${deploy.build.dir}/${docs.dir}"/>
+  	<copy todir="${deploy.build.dir}/${docs.dir}">
+  		<fileset dir="${docs.dir}"/>
+  	</copy>
+  	<mkdir dir="${deploy.build.dir}/${examples.dir}"/>
+  	<copy todir="${deploy.build.dir}/${examples.dir}">
+  		<fileset dir="${examples.dir}"/>
+  	</copy>
+  	
+  	<copy file="license.txt" todir="${deploy.build.dir}"/>
+  	<copy file="changes.txt" todir="${deploy.build.dir}"/>
+  	
+  	<tstamp>
+  		<format property="ts" pattern="yyyyMMdd-HHmmss-z"/>
+  	</tstamp>
+  	
+  	<manifest file="${deploy.build.dir}/version">        
+        <attribute name="Implementation-Title" value="${projectName}"/>
+        <attribute name="Implementation-Version" value="${version}"/>
+        <attribute name="Implementation-Vendor" value="IOn AG (http://www.ion.ag/)"/>
+        <attribute name="Build-Id" value="${ts} (${user.name} [${os.name} ${os.version} ${os.arch}])"/>
+    </manifest>
+  	
+  	<tar longfile="gnu" destfile="${deploy.dir}/${deploy.tar.name}"> 
+  		<tarfileset dir="${deploy.dir}">
+  			<include name="${name}-${version}"/>
+  			<include name="${name}-${version}/**"/>
+  		</tarfileset>
+  	</tar>
+  	<gzip zipfile="${deploy.dir}/${deploy.gzip.name}" src="${deploy.dir}/${deploy.tar.name}"/>  
+  	
+  	<zip zipfile="${deploy.dir}/${deploy.zip.name}">
+  		<zipfileset dir="${deploy.dir}">
+  			<include name="${name}-${version}"/>
+  			<include name="${name}-${version}/**"/>
+  		</zipfileset>
+  	</zip>  	
+  	
+  	<mkdir dir="${deploy.dir}/temp"/>
+		<unjar dest="${deploy.dir}/temp">
+			<fileset dir="${lib.dir}">
+				<patternset id="lib.pattern" >
+      		<include name="*.jar"/>
+					<exclude name="junit*"/>
+        </patternset>
+			</fileset>
+		</unjar>
+  	
+  	<jar jarfile="${deploy.dir}/${deploy.all.jar.name}">
+			<fileset dir="${classes.dir}"/>
+			<fileset dir="${deploy.dir}/temp"/>
+		  <manifest>        
+		  	<attribute name="Implementation-Title" value="${projectName}"/>
+		    <attribute name="Implementation-Version" value="${version}"/>
+		    <attribute name="Implementation-Vendor" value="IOn AG (http://www.ion.ag/)"/>
+		    <attribute name="Build-Id" value="${ts} (${user.name} [${os.name} ${os.version} ${os.arch}])"/>
+		 	</manifest>
+		</jar>	
+  	<delete dir="${deploy.dir}/temp"/>
+  	
+  </target>	
+  <!-- ================================================================= -->
+  <!-- Creates test deployment                                           -->
+  <!-- ================================================================= -->  
+  <target name="deploy-test" depends="jar-test">
+  	<delete dir="${deploy.test.build.dir}"/>  
+  	<delete file="${deploy.dir}/${deploy.test.tar.name}"/>  
+  	<delete file="${deploy.dir}/${deploy.test.gzip.name}"/> 
+  	<delete file="${deploy.dir}/${deploy.test.zip.name}"/> 
+  	
+  	<mkdir dir="${deploy.test.build.dir}/${lib.dir}"/>
+  	<copy todir="${deploy.test.build.dir}/${lib.dir}">
+  		<fileset dir="${lib.dir}"/>
+  	</copy>
+  	<copy file="${build.lib}/${jar.name}" todir="${deploy.test.build.dir}/${lib.dir}"/>
+  	
+  	<copy file="license.txt" todir="${deploy.test.build.dir}"/>
+  	<copy file="changes.txt" todir="${deploy.test.build.dir}"/>
+  	
+  	<mkdir dir="${deploy.test.build.dir}/${bin.dir}"/>
+  	<copy todir="${deploy.test.build.dir}/${bin.dir}">
+  		<fileset dir="${bin.dir}"/>
+  	</copy>
+  	
+  	<tstamp>
+  		<format property="ts" pattern="yyyyMMdd-HHmmss-z"/>
+  	</tstamp>
+  	
+  	<manifest file="${deploy.test.build.dir}/version">        
+        <attribute name="Implementation-Title" value="${projectName}"/>
+        <attribute name="Implementation-Version" value="${version}"/>
+        <attribute name="Implementation-Vendor" value="IOn AG (http://www.ion.ag/)"/>
+        <attribute name="Build-Id" value="${ts} (${user.name} [${os.name} ${os.version} ${os.arch}])"/>
+    </manifest>
+  	
+  	<tar longfile="gnu" destfile="${deploy.dir}/${deploy.test.tar.name}"> 
+  		<tarfileset dir="${deploy.dir}">
+  			<include name="${name}-${testAppendix}-${version}"/>
+  			<include name="${name}-${testAppendix}-${version}/**"/>
+  		</tarfileset>
+  	</tar>
+  	<gzip zipfile="${deploy.dir}/${deploy.test.gzip.name}" src="${deploy.dir}/${deploy.test.tar.name}"/>  
+  	
+  	<zip zipfile="${deploy.dir}/${deploy.test.zip.name}">
+  		<zipfileset dir="${deploy.dir}">
+  			<include name="${name}-${testAppendix}-${version}"/>
+  			<include name="${name}-${testAppendix}-${version}/**"/>
+  		</zipfileset>
+  	</zip>
+  </target>	
+  <!-- ================================================================= -->
+  <!-- Creates source deployment                                                 -->
+  <!-- ================================================================= -->  
+  <target name="deploy.src" depends="init">
+  	<delete dir="${deploy.src.build.dir}"/>  
+  	<delete file="${deploy.src.dir}/${deploy.src.tar.name}"/>  
+  	<delete file="${deploy.src.dir}/${deploy.src.gzip.name}"/> 
+  	<delete file="${deploy.src.dir}/${deploy.src.zip.name}"/> 
+  	
+  	<mkdir dir="${deploy.src.build.dir}/${lib.dir}"/>
+  	<copy todir="${deploy.src.build.dir}/${lib.dir}">
+  		<fileset dir="${lib.dir}"/>
+  	</copy>
+  	
+  	<mkdir dir="${deploy.src.build.dir}/${src.dir}"/>
+  	<copy todir="${deploy.src.build.dir}/${src.dir}">
+  		<fileset dir="${src.dir}"/>
+  	</copy>
+  	
+  	<mkdir dir="${deploy.src.build.dir}/${examples.dir}"/>
+  	<copy todir="${deploy.src.build.dir}/${examples.dir}">
+  		<fileset dir="${examples.dir}"/>
+  	</copy>
+  	
+  	<mkdir dir="${deploy.src.build.dir}/${test.dir}"/>
+  	<copy todir="${deploy.src.build.dir}/${test.dir}">
+  		<fileset dir="${test.dir}"/>
+  	</copy>
+  	
+  	<copy file="license.txt" todir="${deploy.src.build.dir}"/>
+  	<copy file="changes.txt" todir="${deploy.src.build.dir}"/>
+  	<copy file="build.xml" todir="${deploy.src.build.dir}"/>
+  	
+  	<tstamp>
+  		<format property="ts" pattern="yyyyMMdd-HHmmss-z"/>
+  	</tstamp>
+  	
+  	<manifest file="${deploy.src.build.dir}/version">        
+        <attribute name="Implementation-Title" value="${projectName} - Source"/>
+        <attribute name="Implementation-Version" value="${version}"/>
+        <attribute name="Implementation-Vendor" value="IOn AG (http://www.ion.ag/)"/>
+        <attribute name="Build-Id" value="${ts} (${user.name} [${os.name} ${os.version} ${os.arch}])"/>
+    </manifest>
+  	
+  	<tar longfile="gnu" destfile="${deploy.src.dir}/${deploy.src.tar.name}"> 
+  		<tarfileset dir="${deploy.src.dir}">
+  			<include name="${name}-src-${version}"/>
+  			<include name="${name}-src-${version}/**"/>
+  		</tarfileset>
+  	</tar>
+  	<gzip zipfile="${deploy.src.dir}/${deploy.src.gzip.name}" src="${deploy.src.dir}/${deploy.src.tar.name}"/>  
+  	
+  	<zip zipfile="${deploy.src.dir}/${deploy.src.zip.name}">
+  		<zipfileset dir="${deploy.src.dir}">
+  			<include name="${name}-src-${version}"/>
+  			<include name="${name}-src-${version}/**"/>
+  		</zipfileset>
+  	</zip>
+  </target>	
+  <!-- ================================================================= -->
+  <!-- Cleanbuild for CruiseControl                                      -->
+  <!-- ================================================================= -->
+  <target name="cleanbuild" depends="clean, masterbuild"/>   
+  <!-- ================================================================= -->
+  <!-- Masterbuild for CruiseControl                                     -->
+  <!-- ================================================================= -->
+  <target name="masterbuild" depends="deploy"/>  
+  <!-- ================================================================= --> 
+  <!-- ================================================================= --> 
+</project>  
+<!-- ================================================================= --> 	

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Der Produkteditor</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Der Produkteditor</h1>
+	<p>Je nach Einstellungen sind einige Elemente ausgeblendet.</p>
+	<img class="screenshot" src="editor_product.png" alt="" /> <br />
+
+	<h2>Artikelnummer</h2>
+	<p>Artikelnummer des Produktes. Diese wird automatisch hochgezählt. Sie kann nachträglich geändert werden.
+	Es erscheint beim Abspeichern eine Warnung, wenn Sie nicht der nächsten freien Nummer entspricht.</p>
+	<p class="see">Siehe <a href="../preferences/numberrangevalues.html">Nummernkreise</a></p>
+
+	<h2>Name</h2>
+	<p>Name des Produktes.</p>
+
+	<h2>Kategorie</h2>
+	<p>Kategorie, in die das Produkt einsortiert wird.
+	Beim Import aus einem Webshop werden hier die Kategorie aus dem Webshop verwendet.
+	Die Verwendung von Unterkategorien ist möglich. 
+	Die Bezeichnungen sind dann durch einen Schrägstrich <b>/</b> zu trennen. Beispiel:</p>
+	<p class="code">Hauptkategorie/Unterkategorie/WeitereUnterkategorie</p>
+
+	<h2>Beschreibung</h2>
+	<p>Kurze Beschreibung des Produktes,</p>
+
+	<h2>Preis</h2>
+	<p>Je nach Einstellung wird der Netto- oder Bruttopreis angezeigt.
+	Beim Editieren des Nettopreises wird automatische der Bruttopreis abgepasst und umgekehrt.
+	Abhängig vom Mehrwertsteuersatz. Die Verwendung von Staffelpreisen wird ebenfalls möglich.</p>
+
+	<h2>MwSt.</h2>
+	<p>Mehrwertsteuersatz dieses Produktes.</p>
+	<p class="see">Siehe <a href="editor_vat.html">Editor Steuersatz</a></p>
+
+	<h2>Gewicht</h2>
+	<p>Angabe des Gewichtes. Dieser Wert ist nur zur Information.</p>
+
+	<h2>Menge</h2>
+	<p>Anzahl der Artikel im Lager. Dieser Wert kann zur Zeit lediglich vom Webshop abgerufen werden.
+	Eine Aktualisierung beim Erstellen einer Rechnung oder eines Lieferscheines findet nicht statt.</p>
+
+	<a name="editor_editor_product_pic" ></a>
+	<h2>Produktbild</h2>
+	<p>Wird das Produkt aus einem Webshop importiert, wird automatisch das Produktbild verwendet.
+	Bei manuell angelegten Produkten kann ein Bild ausgewählt werden.
+	In beiden Fällen wird eine Kopie des Bildes im Arbeitsverzeichnis im Ordner
+	<b>Pics/Products</b> angelegt.</p>
+
+	<p class="see">Siehe auch <a href="../preferences/product.html">Einstellungen Produkt</a></p>
+
+</body>
+</html>

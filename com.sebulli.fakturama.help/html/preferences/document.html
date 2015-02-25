@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Dokumenten Einstellungen</title>
+  	<link rel="stylesheet" href="../common/style.css" type="text/css" />
+</head>
+
+<body>
+	<h1>Dokumenten Einstellungen</h1>
+
+	<h2>Preise in Artikelliste</h2>
+	<p>Legt fest, ob die Preise in der Artikelliste der Dokumente (Rechnungen, Lieferscheine ..) 
+	als Netto oder Brutto angezeigt werden</p>
+	<img class="screenshot" src="document_netgross.png" alt="" />
+
+	<h2>Kommentar beim Duplizieren von Dokumenten übernehmen</h2>
+	<p>Wird ein Dokument dupliziert (wird zum Beispiel aus einer Bestellung eine Rechnung erzeugt), so werden Adresse und Artikel übernommen.
+	Es ist möglich, den Kommentartext ebenfalls zu übernehmen oder beim duplizierten Dokument leer zu lassen.</p>
+	<p>Der Kommentar einer Bestellung ist derjenige, den der Kunde bei seiner Bestellung im Webshop eingegeben hat.
+	Es ist nicht immer sinnvoll, diesen Text auch auf die Rechnung weiter zu geben. Der Text dort ist vielmals eine Information an den Kunden.</p>
+	<img class="screenshot" src="document_copymessage.png" alt="" />
+
+	<h2>Beschreibung aus Produktauswahl-Dialog übernehmen</h2>
+	<p>In den Dokumenten kann ein neuer Artikel über den Produktauswahl-Dialog eingefügt werden.
+	Diese Einstellung legt fest, ob die Produktbeschreibung mit übernommen wird.
+	Oftmals ist die Produktbeschreibung ein längerer Text und nicht geeignet für die Artikelliste eines Dokumentes.
+	Ist diese Option nicht ausgewählt bleibt das Feld 'Beschreibung' der Artikelliste leer und kann mit zusätzlicher Information wie 'Farbe: rot' versehen werden.</p>
+	<img class="screenshot" src="document_description.png" alt="" />
+	<p class="see">Siehe auch <a href="../editor/editor_document.html">Dokumenteneditor</a></p>
+
+	<a name="preferences_document_previewpicture" ></a>
+	<h2>Vorschaubild anzeigen</h2>
+	<p>Im Dokumenteneditor wird eine zusätzliche Spalte mit dem Produktbild eingefügt.</p>
+	<img class="screenshot" src="product_preview.png" alt="" />
+	<p class="see">Siehe auch <a href="../editor/editor_document.html#editor_document_previewpicture">Dokumenteneditor</a></p>
+
+	<h2>Artikelposition benutzen</h2>
+	<p>Die Spalte <b>POS</b> in der Artikelliste wird ein- oder ausgeblendet.</p>
+
+	<h2>Rabatt auf einzelne Artikel benutzen</h2>
+	<p>Die Spalte <b>Rabatt</b> in der Artikelliste wird ein- oder ausgeblendet.</p>
+	<img class="screenshot" src="discount_item.png" alt="" />
+
+	<h2>Rabatt auf alle Artikel benutzen</h2>
+	<p>Die Zeile <b>Rabatt</b> auf alle Artikel wird ein- oder ausgeblendet.</p>
+	<img class="screenshot" src="discount_items.png" alt="" />
+
+
+	<h2>Artikelpreise im Lieferschein anzeigen</h2>
+	<p>Im Dokumenteneditor für Lieferscheine können die Artikelpreise ein- oder ausgeblendet werden.
+	Unabhängig davon, ob sie später gedruckt werden oder nicht.</p>
+	
+	<a name="preferences_document_importdeliverynote" ></a>
+	<h2>Lieferscheinnummer beim Import hinzufügen</h2>
+	<p>Werden alle Produkte eines Lieferscheins importiert, kann zusätzlich die Lieferscheinnummer in das Textfeld
+	<b>Bemerkung</b> übernommen werden.</p>
+
+	<a name="preferences_document_customer_statistics" ></a>
+	<h2>Dialog bei Stammkunden anzeigen</h2>
+	<p>Ist diese Einstellung aktiv, wird beim Öffnen einer Bestellung geprüft, ob der Kunde in der Vergangenheit
+	bereits bestellt hat. Umsatz und Anzahl der bezahlten Rechnungen werden in einem Dialog angezeigt.</p>
+	<img class="screenshot" src="../editor/customer_statistics_dialog.png" alt="" />
+
+	<h2>Vergleichen:</h2>
+	<p>Legt fest, welche Dokumente beim Überprüfen eines Stammkunden verwendet werden.</p>
+	<ul>
+		<li><b>Nur die Kunden-ID</b> Es werden nur die Rechnungen verwendet, die unter der gleichen Kundennummer angelegt wurden.</li>
+		<li><b>auch das Adressfeld</b> Es werden auch die Rechnungen mit gleicher oder sehr ähnlicher Adresse verwendet</li>
+	</ul>
+
+	<a name="preferences_document_messagefields" ></a>
+	<h2>Anzahl der zusätzlichen Felder "Bemerkung"</h2>
+	<p>Im Dokumenteneditor können bis zu 3 Felder für Bemerkungen eingeblendet werden.</p>
+	<p class="see">Siehe auch <a href="../openoffice/placeholders_common.html#openoffice_placeholders_message">Platzhalter Feld "Bemerkung"</a></p>
+
+</body>
+</html>

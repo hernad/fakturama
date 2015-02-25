@@ -1,0 +1,170 @@
+<contexts>
+   <context id="startBrowserEditor" title="Startfenster">
+      <description>Eigene Startseite in einem Browserfenster. </description>
+      <topic label="Browser"  href="html/editor/editor_browser.html" />
+   </context>
+   <context id="browserEditor" title="Browserfenster">
+      <description>Projektseite in einem Browserfenster. </description>
+      <topic label="Browser"  href="html/editor/editor_browser.html" />
+   </context>
+   <context id="contactEditor" title="Kontakteditor">
+      <description>Editor für Kontaktadressen wie Kunden und Lieferanten.</description>
+      <topic label="Kontakteditor"  href="html/editor/editor_contact.html" />
+   </context>
+   <context id="documentEditor" title="Dokumenteneditor">
+      <description>Dokumenteditor für Rechnungen, Lieferscheine etc.</description>
+      <topic label="Dokumenteneditor"  href="html/editor/editor_document.html" />
+   </context>
+   <context id="voucherEditor" title="Editor Bebeleg">
+      <description>Editor für Einnahme- und Ausgabebelege. Alle Belege können tabellarisch exportiert werden.</description>
+      <topic label="Editor Bebeleg"  href="html/editor/editor_voucher.html" />
+   </context>
+   <context id="listEditor" title="Editor Listeneintrag">
+      <description>Fakturama benutzt Listen (Tabelle mit 2 Spalten) für Daten wie Kontennummern oder Länderkennungen.</description>
+      <topic label="Editor Listeneintrag"  href="html/editor/editor_list.html" />
+   </context>
+   <context id="paymentEditor" title="Editor Zahlungsmethoden">
+      <description>Editor für Zahlungsmethoden.</description>
+      <topic label="Editor Zahlungsmethode"  href="html/editor/editor_payment.html" />
+   </context>
+   <context id="productEditor" title="Produkteditor">
+      <description>Editor für alle Produkte.</description>
+      <topic label="Produkteditor"  href="html/editor/editor_product.html" />
+   </context>
+   <context id="shippingEditor" title="Editor Versandarten">
+      <description>Editor zum Erstellen und Bearbeiten von  Versandarten.</description>
+      <topic label="Editor Versandart"  href="html/editor/editor_shipping.html" />
+   </context>
+   <context id="textEditor" title="Editor Texteinträge">
+      <description>Mit dem Texteditor können oft benutzte Texte erstellt werden, die dann später einfach zu benutzen sind.</description>
+      <topic label="Editor Text"  href="html/editor/editor_text.html" />
+   </context>
+   <context id="vatEditor" title="Editor Steuersatz">
+      <description>Editor zum Erstellen und Bearbeiten von Steuersätzen.</description>
+      <topic label="Editor Steuersatz"  href="html/editor/editor_vat.html" />
+   </context>
+   <context id="parcelServiceEditor" title="Webseite Paketdienst">
+      <description>Webseite des Paketdienstes. Formularfelder der Empfängeradresse werden automatisch ausgefüllt.</description>
+      <topic label="Webseite Paketdienst"  href="html/editor/editor_parcelservice.html" />
+   </context>
+
+   <context id="contactTableView" title="Übersicht aller Kontakte">
+      <description>Tabelle mit einer Übersicht aller Kontaktadressen.</description>
+      <topic label="Übersichtsfester Kontakte"  href="html/application/overview.html" />
+   </context>
+   <context id="documentTableView" title="Übersicht aller Dokumente">
+      <description>Tabelle mit einer Übersicht aller Dokumente.</description>
+      <topic label="Übersichtsfester Dokumente"  href="html/application/overview.html" />
+   </context>
+   <context id="voucherTableView" title="Übersicht aller Belege">
+      <description>Tabelle mit einer Übersicht aller Belege</description>
+      <topic label="Übersichtsfester Belege"  href="html/application/overview.html" />
+   </context>
+   <context id="listTableView" title="Übersicht aller Listeneinträge">
+      <description>Tabelle mit einer Übersicht aller Listeneinträge</description>
+      <topic label="Übersichtsfester Listeneinträge"  href="html/application/overview.html" />
+   </context>
+   <context id="paymentTableView" title="Übersicht aller Zahlungsmethoden">
+      <description>Tabelle mit einer Übersicht aller Zahlungsmethoden.</description>
+      <topic label="Übersichtsfester Zahlungsmethoden"  href="html/application/overview.html" />
+   </context>
+   <context id="productsTableView" title="Übersicht aller Produkte">
+      <description>Tabelle mit einer Übersicht aller Produkte.</description>
+      <topic label="Übersichtsfester Produkte"  href="html/application/overview.html" />
+   </context>
+   <context id="shippingTableView" title="Übersicht aller Versandarten">
+      <description>Tabelle mit einer Übersicht aller Versandarten.</description>
+      <topic label="Übersichtsfester Versandarten"  href="html/application/overview.html" />
+   </context>
+   <context id="textTableView" title="Übersicht aller Texteinträge">
+      <description>Tabelle mit einer Übersicht aller Texteinträge.</description>
+      <topic label="Übersichtsfester Texte"  href="html/application/overview.html" />
+   </context>
+   <context id="vatTableView" title="Übersicht aller Steuersätze">
+      <description>Tabelle mit einer Übersicht aller Steuersätze.</description>
+      <topic label="Übersichtsfester Steuersätze"  href="html/application/overview.html" />
+   </context>
+   
+   <context id="calculatorView" title="Taschenrechner">
+      <description>Ein Taschenrechner, der immer schnell zur Verfügung steht.</description>
+      <topic label="Taschenrechner"  href="html/application/calculator.html" />
+   </context>
+   <context id="navigationView" title="Navigationsleiste">
+      <description>Navigationsleiste mit den wichtigsten Daten und Kommandos.</description>
+      <topic label="Navigationsleiste"  href="html/application/navigationbar.html" />
+   </context>
+   <context id="errorView" title="Fehlerfenster">
+      <description>Das Fehlerfenster wird bei einem internen Fehler eingeblendet.</description>
+      <topic label="Fehlerfenster"  href="html/application/errorview.html" />
+   </context>
+
+   <context id="generalPreferencePage" title="Allgemeine Einstellungen">
+      <description>Allgemeine Einstellungen zu Fakturama.</description>
+      <topic label="Allgemeine Einstellungen"  href="html/preferences/general.html" />
+   </context>
+   <context id="contactPreferencePage" title="Einstellungen Kontakte">
+      <description>Legt das Erscheinungsbild des Kontakteditors fest.</description>
+      <topic label="Einstellungen Kontakte"  href="html/preferences/contact.html" />
+   </context>
+   <context id="contactFormatPreferencePage" title="Format des Adressfeldes">
+      <description>Definiert den Text der Grußformel und den Aufbau des Adressfeldes.</description>
+      <topic label="Format des Adressfeldes"  href="html/preferences/contactformat.html" />
+   </context>
+   <context id="documentPreferencePage" title="Dokumenten Einstellungen">
+      <description>Einstellungen der Dokumenteneditoren.</description>
+      <topic label="Dokumenten Einstellungen"  href="html/preferences/document.html" />
+   </context>
+   <context id="optionalItemsPreferencePage" title="Einstellungen Bedarfsposition">
+      <description>Einstellungen zu optionalen Artikeln / Bedarfspositionen.</description>
+      <topic label="Einstellungen Bedarfsposition"  href="html/preferences/optional_items.html" />
+   </context>
+   <context id="exportPreferencePage" title="Einstellungen Export">
+      <description>Einstellungen des Datenexportes.</description>
+      <topic label="Einstellungen Export"  href="html/preferences/export.html" />
+   </context>
+   <context id="numberRangePreferencePage" title="Nummernkreise">
+      <description>Werte der Nummernkreise.</description>
+      <topic label="Nummernkreise"  href="html/preferences/numberrangevalues.html" />
+   </context>
+   <context id="numberRangeFormatPreferencePage" title="Format der Nummernkreise">
+      <description>Legt das Format der Nummernkreise fest.</description>
+      <topic label="Format der Nummernkreise"  href="html/preferences/numberrangeformat.html" />
+   </context>
+   <context id="openOfficePreferencePage" title="OpenOffice.org / LibreOffice Einstellungen">
+      <description>Einstellung beim Drucken mit OpenOffice oder LibreOffice.</description>
+      <topic label="OpenOffice.org / LibreOffice Einstellungen"  href="html/preferences/openoffice.html" />
+   </context>
+   <context id="parcelServicePreferencePage" title="Paketdienst">
+      <description>Einstellungen Webseite des Paketdienstes.</description>
+      <topic label="Paketdienst"  href="html/preferences/parcelservice.html" />
+   </context>
+   <context id="productPreferencePage" title="Produkteinstellungen">
+      <description>Legt das Erscheinungsbild des Produkteditors fest.</description>
+      <topic label="Produkteinstellungen"  href="html/preferences/product.html" />
+   </context>
+   <context id="webShopImportreferencePage" title="Import aus Webshop">
+      <description>Einstellungen zum Import aus einem Webshop.</description>
+      <topic label="Import aus Webshop"  href="html/preferences/webshopimport.html" />
+   </context>
+   <context id="webShopAuthorizationPreferencePage" title="Webshop Autorisierung">
+      <description>Einstellungen eines zusätzlich passwortgeschützen Webshops.</description>
+      <topic label="Webshop Autorisierung"  href="html/preferences/webshopauthorization.html" />
+   </context>
+   <context id="yourCompanyPreferencePage" title="Firmendaten">
+      <description>Firmendaten.</description>
+      <topic label="Firmendaten"  href="html/preferences/yourcompany.html" />
+   </context>
+   <context id="columnWidthPreferencePage" title="Einstellungen Spaltenbreite Tabellen">
+      <description>Einstellungen Spaltenbreite Tabellen.</description>
+      <topic label="Einstellungen Spaltenbreite Tabellen"  href="html/preferences/columnwidth.html" />
+   </context>
+   <context id="browserPreferencePage" title="Webbrowser / Startseite">
+      <description>Einstellungen des Webbrowsers und der Startseite.</description>
+      <topic label="Webbrowser / Startseite"  href="html/preferences/browser.html" />
+   </context>
+   <context id="toolbarPreferencePage" title="Werkzeugleiste">
+      <description>Icons in der Werkzeugleiste ein/ausblenden.</description>
+      <topic label="Werkzeugleiste"  href="html/preferences/toolbar.html" />
+   </context>
+   
+</contexts>

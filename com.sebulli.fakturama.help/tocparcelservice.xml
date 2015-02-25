@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Paketdienst" link_to="toc.xml#parcelservice" topic="html/parcelservice/main.html"> 
+	
+	<topic label="Paketdienstvorlagen"  href="html/parcelservice/templates.html">
+	</topic>
+
+</toc>

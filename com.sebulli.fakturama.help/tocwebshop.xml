@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Webshop" link_to="toc.xml#webshop"> 
+
+	<topic label="Übersicht Webshop Systeme"  href="html/webshop/overview_webshops.html"></topic>
+	<topic label="Webshop Schnittstelle"  href="html/webshop/webshop_connector.html"></topic>
+
+</toc>
